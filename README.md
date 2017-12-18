@@ -2,6 +2,9 @@
 
 ## 3-day program for a course on data science
 
+This course is somewhat based on parts of the
+[Software Carpentry](software-carpentry.org/) curriculum.
+
 ### Day 1: Foundations
 
 9 - 10: Introduction and motivation
@@ -16,9 +19,16 @@
 
 Afternoon: git and GitHub
 
-- Version
-
+- Navigating the file system in the shell
+- Introducing version control
+- Configuring git
+- Setting up a repository
+- Tracking changes
+- Exploring history
+- Ignoring things
+- Remotes on Github
 - Collaborating on Github
+- Merge conflicts and conflict resolution
 
 *Homework: Code challenges. Set up your own GitHub project*
 
@@ -26,7 +36,7 @@ Afternoon: git and GitHub
 
 Morning: introducing Pandas
 
-- Reading data from a files
+- Reading data from csv files
 - Indexing in Pandas DataFrames
 
 Afternoon: manipulating data with Pandas
@@ -41,4 +51,8 @@ Afternoon: manipulating data with Pandas
 
 Morning: Extracting statistics from Pandas DataFrames
 
-Afternoon: Visualizing data with Matplotlib
+Afternoon:
+
+1 - 2:30 Visualizing data with Matplotlib
+
+2:30 - 4 Next steps -- where do we go from here?
