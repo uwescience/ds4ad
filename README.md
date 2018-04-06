@@ -3,7 +3,12 @@
 ## 3-day program for a course on data science
 
 This course is somewhat based on parts of the
-[Software Carpentry](software-carpentry.org/) curriculum.
+[Software Carpentry](https://software-carpentry.org/) curriculum.
+
+### Setup:
+
+- Get a Github account at: https://github.com
+- Get an Azure account at: https://notebooks.azure.com
 
 ### Day 1: Foundations
 
