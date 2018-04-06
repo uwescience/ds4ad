@@ -12,9 +12,9 @@ This course is somewhat based on parts of the
 
 ### Day 1: Foundations
 
-9 - 10: Introduction and motivation
+9 - 10: Introduction and motivation (Ariel)
 
-10 - 12: Foundations of programming in Python
+10 - 12: Foundations of programming in Python (Jose)
 
 - Variables and variable assignment
 - Repeating actions with loops
@@ -22,7 +22,7 @@ This course is somewhat based on parts of the
 - Making choices
 - Creating functions
 
-Afternoon: git and GitHub
+Afternoon: git and GitHub (Bryna)
 
 - Navigating the file system in the shell
 - Introducing version control
@@ -39,12 +39,12 @@ Afternoon: git and GitHub
 
 ### Day 2: Data munging
 
-Morning: introducing Pandas
+Morning: introducing Pandas (Bryna)
 
 - Reading data from csv files
 - Indexing in Pandas DataFrames
 
-Afternoon: manipulating data with Pandas
+Afternoon: manipulating data with Pandas (Ariel)
 
 - Filtering data
 - Merging DataFrames
@@ -54,10 +54,10 @@ Afternoon: manipulating data with Pandas
 
 ### Day 3: Data analysis and data visualization
 
-Morning: Extracting statistics from Pandas DataFrames
+Morning: Extracting statistics from Pandas DataFrames (Ariel)
 
 Afternoon:
 
-1 - 2:30 Visualizing data with Matplotlib
+1 - 2:30 Visualizing data with Matplotlib (Jose)
 
-2:30 - 4 Next steps -- where do we go from here?
+2:30 - 4 Next steps -- where do we go from here? (Bryna + Jose (+ Ariel))
