@@ -12,7 +12,7 @@ This course is somewhat based on parts of the
 
 ### Day 1: Foundations
 
-9 - 10: Introduction and motivation (Ariel)
+9 - 10: [Introduction and motivation](introduction/README.md) (Ariel)
 
 10 - 12: Foundations of programming in Python (Jose)
 
@@ -35,7 +35,25 @@ Afternoon: git and GitHub (Bryna)
 - Collaborating on Github
 - Merge conflicts and conflict resolution
 
-*Homework: Code challenges. Set up your own GitHub project*
+#### Homework day 1: 
+
+**Code Challenges** 
+
+TODO 
+
+**Set up your own GitHub project** 
+
+TODO
+
+**Bring a use-case**
+
+Tomorrow, tell us about a data use-case that you have in mind for your work: 
+
+1. What is the data?
+2. What are some questions you would like to answer with these data?
+3. How is the data currently stored? 
+
+
 
 ### Day 2: Data munging
 
