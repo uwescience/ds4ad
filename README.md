@@ -12,7 +12,7 @@ This course is somewhat based on parts of the
 
 ### Day 1: Foundations
 
-9 - 10: [Introduction and motivation](introduction/README.md) (Ariel)
+9 - 10: [Introduction](introduction/index.html) (Ariel)
 
 10 - 12: [Foundations of programming in Python](python_programming/README.md)(Jose)
 
