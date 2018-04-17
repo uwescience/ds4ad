@@ -14,7 +14,7 @@ This course is somewhat based on parts of the
 
 9 - 10: [Introduction and motivation](introduction/README.md) (Ariel)
 
-10 - 12: Foundations of programming in Python (Jose)
+10 - 12: [Foundations of programming in Python](python_programming/README.md)(Jose)
 
 - Variables and variable assignment
 - Repeating actions with loops
