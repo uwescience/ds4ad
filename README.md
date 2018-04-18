@@ -22,7 +22,9 @@ This course is somewhat based on parts of the
 - Making choices
 - Creating functions
 
-Afternoon: git and GitHub (Bryna)
+Noon - 1 PM lunch
+
+1 - 4 : git and GitHub (Bryna)
 
 - Navigating the file system in the shell
 - Introducing version control
@@ -53,16 +55,16 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 2. What are some questions you would like to answer with these data?
 3. How is the data currently stored? 
 
-
-
 ### Day 2: Data munging
 
-Morning: introducing Pandas (Bryna)
+9 - noon : introducing Pandas (Bryna)
 
 - Reading data from csv files
 - Indexing in Pandas DataFrames
 
-Afternoon: manipulating data with Pandas (Ariel)
+Noon - 1 PM: lunch
+
+1 - 4 PM: manipulating data with Pandas (Ariel)
 
 - Filtering data
 - Merging DataFrames
@@ -72,10 +74,12 @@ Afternoon: manipulating data with Pandas (Ariel)
 
 ### Day 3: Data analysis and data visualization
 
-Morning: Extracting statistics from Pandas DataFrames (Ariel)
+9 - noon : Extracting statistics from Pandas DataFrames (Ariel)
+
+Noon - 1 PM: lunch
 
 Afternoon:
 
-1 - 2:30 Visualizing data with Matplotlib (Jose)
+1 PM - 2:30 Visualizing data with Matplotlib (Jose)
 
 2:30 - 4 Next steps -- where do we go from here? (Bryna + Jose (+ Ariel))
