@@ -15,13 +15,6 @@ print(word[1])
 print(word[2])
 print(word[3])
 ```
-
-    l
-    e
-    a
-    d
-    
-
 This is a bad approach for two reasons:
 1. It doesn’t scale: if we want to print the characters in a string that’s hundreds of letters long, we’d be better off just typing them in.
 2. It’s fragile: if we give it a longer string, it only prints part of the data, and if we give it a shorter one, it produces an error because we’re asking for characters that don’t exist.
@@ -51,7 +44,7 @@ The improved version uses a *for loop* to repeat an operation — in this case, 
 for variable in collection:
     do things with variable
 ```
-![Loops](./loops.png)
+![loops](./loops.png)
 
 where each character (`char`) in the variable `word` is looped through and printed one character after another. The numbers in the diagram denote which loop cycle the character was printed in (1 being the first loop, and 6 being the final loop).
 
@@ -98,5 +91,3 @@ Note also that finding the length of a string is such a common operation that Py
 print(len('aeiou'))
 ```
 `len` is much faster than any function we could write ourselves, and much easier to read than a two-line loop; it will also give us the length of many other things that we haven’t met yet, so we should always use it when we can.
-
-## Exercises
