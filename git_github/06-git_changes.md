@@ -123,8 +123,8 @@ $ git commit -m "Start notes on guacamole ingredients"
 When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
 and stores a copy permanently inside the special `.git` directory.
-This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
-(or [revision]({{ page.root }}/reference/#revision)) and its short identifier is `f22b25e`
+This permanent copy is called a commit
+(or revision) and its short identifier is `f22b25e`
 (Your commit may have another identifier.)
 
 We use the `-m` flag (for "message")
@@ -315,7 +315,7 @@ but *not* commit some of our work drafting the conclusion
 To allow for this,
 Git has a special *staging area*
 where it keeps track of things that have been added to
-the current [changeset]({{ page.root }}/reference/#changeset)
+the current changeset
 but not yet committed.
 
 > ## Staging Area

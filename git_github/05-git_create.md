@@ -12,7 +12,7 @@ $ cd guacamole
 ~~~
 
 
-Then we tell Git to make `guacamole` a [repository]({{ page.root }}/reference/#repository)—a place where
+Then we tell Git to make `guacamole` a repository—a place where
 Git can store versions of our files:
 
 ~~~
