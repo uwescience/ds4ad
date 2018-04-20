@@ -423,12 +423,12 @@ Conflicts can also be minimized with project management strategies:
 > > ~~~
 > > $ git checkout HEAD guac.jpg
 > > $ git add guac.jpg
-> > $ git commit -m "Use image tastier guacamole"
+> > $ git commit -m "use image of tastier guacamole"
 > > ~~~
 > >
 > >
 > > ~~~
-> > [master 21032c3] Use image tastier guacamole
+> > [master 21032c3] use image of tastier guacamole
 > > ~~~
 > >
 > >
@@ -438,12 +438,12 @@ Conflicts can also be minimized with project management strategies:
 > > ~~~
 > > $ git checkout 439dc8c0 guac.jpg
 > > $ git add guac.jpg
-> > $ git commit -m "Use image prettier guacamole"
+> > $ git commit -m "use image of prettier guacamole"
 > > ~~~
 > >
 > >
 > > ~~~
-> > [master da21b34] Use image prettier guacamole
+> > [master da21b34] use image of prettier guacamole
 > > ~~~
 > >
 > >
