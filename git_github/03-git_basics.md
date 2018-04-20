@@ -35,9 +35,9 @@ Unless there are conflicts, you can even incorporate two sets of changes into th
 A version control system is a tool that keeps track of these changes for us,
 effectively creating different versions of our files. It allows us to
 decide which changes will be made to the next version (each record of these changes is called a
-[commit]({{ page.root }}/reference/#commit)), and keeps useful metadata about them. The
+commit, and keeps useful metadata about them. The
 complete history of commits for a particular project and their metadata make up
-a [repository]({{ page.root }}/reference/#repository). Repositories can be kept in sync
+a repository. Repositories can be kept in sync
 across different computers, facilitating collaboration among different people.
 
 > ## The Long History of Version Control Systems
@@ -49,7 +49,7 @@ across different computers, facilitating collaboration among different people.
 > are *distributed*, meaning that they do not need a centralized server to host the repository.
 > These modern systems also include powerful merging tools that make it possible for multiple authors to work on
 > the same files concurrently.
-{: .callout}
+
 
 > ## Paper Writing
 >
@@ -59,4 +59,3 @@ across different computers, facilitating collaboration among different people.
 > *   Imagine you have 5 co-authors. How would you manage the changes and comments they make to your paper?
 >     If you use LibreOffice Writer or Microsoft Word, what happens if you accept changes made using the
 >     `Track Changes` option? Do you have a history of those changes?
-{: .challenge}

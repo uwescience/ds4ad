@@ -10,7 +10,7 @@ First, let's create a directory for our work and then move into that directory:
 $ mkdir guacamole
 $ cd guacamole
 ~~~
-{: .bash}
+
 
 Then we tell Git to make `guacamole` a [repository]({{ page.root }}/reference/#repository)—a place where
 Git can store versions of our files:
@@ -18,7 +18,7 @@ Git can store versions of our files:
 ~~~
 $ git init
 ~~~
-{: .bash}
+
 
 If we use `ls` to show the directory's contents,
 it appears that nothing has changed:
@@ -26,7 +26,7 @@ it appears that nothing has changed:
 ~~~
 $ ls
 ~~~
-{: .bash}
+
 
 But if we add the `-a` flag to show everything,
 we can see that Git has created a hidden directory within `guacamole` called `.git`:
@@ -34,12 +34,12 @@ we can see that Git has created a hidden directory within `guacamole` called `.g
 ~~~
 $ ls -a
 ~~~
-{: .bash}
+
 
 ~~~
 .	..	.git
 ~~~
-{: .output}
+
 
 Git uses this special sub-directory to store all the information about the project,
 including all files and sub-directories located within the project's directory.
@@ -52,7 +52,7 @@ by asking Git to tell us the status of our project:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 If you are using a different version of git than I am, then then the exact
 wording of the output might be slightly different.
@@ -64,7 +64,7 @@ wording of the output might be slightly different.
 #
 nothing to commit (create/copy files and use "git add" to track)
 ~~~
-{: .output}
+
 
 > ## Places to Create Git Repositories
 >
@@ -82,7 +82,7 @@ nothing to commit (create/copy files and use "git add" to track)
 > $ git init       # make the salsa sub-directory a Git repository
 > $ ls -a          # ensure the .git sub-directory is present indicating we have created a new Git repository
 > ~~~
-> {: .bash}
+>
 >
 > Is the `git init` command, run inside the `salsa` sub-directory, required for
 > tracking files stored in the `salsa` sub-directory?
@@ -106,13 +106,13 @@ nothing to commit (create/copy files and use "git add" to track)
 > > ~~~
 > > $ git status
 > > ~~~
-> > {: .bash}
+> >
 > > ~~~
 > > fatal: Not a git repository (or any of the parent directories): .git
 > > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
+> >
+>
+
 > ## Correcting `git init` Mistakes
 > Wolfman explains to Dracula how a nested repository is redundant and may cause confusion
 > down the road. Dracula would like to remove the nested repository. How can Dracula undo
@@ -126,10 +126,9 @@ nothing to commit (create/copy files and use "git add" to track)
 > > ~~~
 > > $ rm -rf salsa/.git
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > But be careful! Running this command in the wrong directory, will remove
 > > the entire git-history of a project you might want to keep. Therefore, always check your current directory using the
 > > command `pwd`.
-> {: .solution}
-{: .challenge}
+>

@@ -9,7 +9,7 @@ play Owner and Collaborator.
 > a second terminal window.
 > This window will represent your partner, working on another computer. You
 > won't need to give anyone access on GitHub, because both 'partners' are you.
-{: .callout}
+
 
 The Owner needs to give the Collaborator access.
 On GitHub, click the settings button on the right,
@@ -28,7 +28,7 @@ her `Desktop` folder, the Collaborator enters:
 ~~~
 $ git clone https://github.com/vlad/guacamole.git ~/Desktop/vlad-guacamole
 ~~~
-{: .bash}
+
 
 Replace 'vlad' with the Owner's username.
 
@@ -42,31 +42,31 @@ $ cd ~/Desktop/vlad-guacamole
 $ nano spicy_variation.txt
 $ cat spicy_variation.txt
 ~~~
-{: .bash}
+
 
 ~~~
 Replace the tomatoes with spicy salsa.
 ~~~
-{: .output}
+
 
 ~~~
 $ git add spicy_variation.txt
 $ git commit -m "Add notes about spicy_variation"
 ~~~
-{: .bash}
+
 
 ~~~
  1 file changed, 1 insertion(+)
  create mode 100644 spicy_variation.txt
 ~~~
-{: .output}
+
 
 Then push the change to the *Owner's repository* on GitHub:
 
 ~~~
 $ git push origin master
 ~~~
-{: .bash}
+
 
 ~~~
 Counting objects: 4, done.
@@ -77,7 +77,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/vlad/guacamole.git
    9272da5..29aba7c  master -> master
 ~~~
-{: .output}
+
 
 Note that we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
@@ -92,7 +92,7 @@ To download the Collaborator's changes from GitHub, the Owner now enters:
 ~~~
 $ git pull origin master
 ~~~
-{: .bash}
+
 
 ~~~
 remote: Counting objects: 4, done.
@@ -107,7 +107,7 @@ Fast-forward
  1 file changed, 1 insertion(+)
  create mode 100644 spicy_variation.txt
 ~~~
-{: .output}
+
 
 Now the three repositories (Owner's local, Collaborator's local, and Owner's on
 GitHub) are back in sync.
@@ -126,12 +126,12 @@ GitHub) are back in sync.
 > It is better to make many commits with smaller changes rather than
 > of one commit with massive changes: small commits are easier to
 > read and review.
-{: .callout}
+
 
 > ## Switch Roles and Repeat
 >
 > Switch roles and repeat the whole process.
-{: .challenge}
+
 
 > ## Review Changes
 >
@@ -153,8 +153,8 @@ GitHub) are back in sync.
 > > the link in the paragraph above to "compare across forks", and finally
 > > change the head fork to the main repository. This will show all the commits
 > > that are different.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Comment Changes in GitHub
 >
@@ -165,11 +165,10 @@ GitHub) are back in sync.
 > code to comment, a blue comment icon appears to open a comment window.
 >
 > The Collaborator posts its comments and suggestions using GitHub interface.
-{: .challenge}
+
 
 > ## Version History, Backup, and Version Control
 >
 > Some backup software can keep a history of the versions of your files. They also
 > allows you to recover specific versions. How is this functionality different from version control?
 > What are some of the benefits of using version control, Git and GitHub?
-{: .challenge}

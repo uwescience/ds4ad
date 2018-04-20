@@ -14,7 +14,7 @@ Dracula sets up his new laptop:
 $ git config --global user.name "Vlad Dracula"
 $ git config --global user.email "vlad@tran.sylvan.ia"
 ~~~
-{: .bash}
+
 
 Please use your own name and email address instead of Dracula's. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
@@ -43,18 +43,18 @@ in a later lesson will include this information.
 > ~~~
 > $ git config --global core.autocrlf input
 > ~~~
-> {: .bash}
+>
 >
 > And on Windows:
 >
 > ~~~
 > $ git config --global core.autocrlf true
 > ~~~
-> {: .bash}
+>
 >
 > You can read more about this issue
 > [on this GitHub page](https://help.github.com/articles/dealing-with-line-endings/).
-{: .callout}
+
 
 For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy].
 If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one. You can change the email address later on by using the `git config` command again.
@@ -87,7 +87,7 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 >
 > Note that `vim` is the default editor for many programs. If you haven't used `vim` before and wish to exit a session without saving
 your changes, type `Esc` then `:q!` and `Enter`. If you want to save your changes and quit, type `Esc` then `:wq` and `Enter`.
-{: .callout}
+
 
 
 The four commands we just ran above only need to be run once: the flag `--global` tells Git
@@ -98,7 +98,7 @@ You can check your settings at any time:
 ~~~
 $ git config --list
 ~~~
-{: .bash}
+
 
 You can change your configuration as many times as you want: just use the
 same commands to choose another editor or update your email address.
@@ -113,7 +113,7 @@ same commands to choose another editor or update your email address.
 > $ git config --global http.proxy proxy-url
 > $ git config --global https.proxy proxy-url
 > ~~~
-> {: .bash}
+>
 >
 > To disable the proxy, use
 >
@@ -121,8 +121,8 @@ same commands to choose another editor or update your email address.
 > $ git config --global --unset http.proxy
 > $ git config --global --unset https.proxy
 > ~~~
-> {: .bash}
-{: .callout}
+>
+
 
 > ## Git Help and Manual
 >
@@ -132,7 +132,7 @@ same commands to choose another editor or update your email address.
 > $ git config -h
 > $ git config --help
 > ~~~
-> {: .bash}
-{: .callout}
+>
+
 
 [git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/

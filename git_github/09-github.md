@@ -31,7 +31,7 @@ $ mkdir guacamole
 $ cd guacamole
 $ git init
 ~~~
-{: .bash}
+
 
 Our local repository still contains our earlier work on `ingredients.txt`, but the
 remote repository on GitHub doesn't contain any files yet:
@@ -57,7 +57,7 @@ SSH to HTTPS.
 > [Atlassian/BitBucket](https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git)
 > and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
 > (this one has a screencast).
-{: .callout}
+
 
 ![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
 
@@ -67,7 +67,7 @@ this command:
 ~~~
 $ git remote add origin https://github.com/vlad/guacamole.git
 ~~~
-{: .bash}
+
 
 Make sure to use the URL for your repository rather than Vlad's: the only
 difference should be your username instead of `vlad`.
@@ -77,13 +77,13 @@ We can check that the command has worked by running `git remote -v`:
 ~~~
 $ git remote -v
 ~~~
-{: .bash}
+
 
 ~~~
 origin   https://github.com/vlad/guacamole.git (push)
 origin   https://github.com/vlad/guacamole.git (fetch)
 ~~~
-{: .output}
+
 
 The name `origin` is a local nickname for your remote repository. We could use
 something else if we wanted to, but `origin` is by far the most common choice.
@@ -94,7 +94,7 @@ our local repository to the repository on GitHub:
 ~~~
 $ git push origin master
 ~~~
-{: .bash}
+
 
 ~~~
 Counting objects: 9, done.
@@ -106,7 +106,7 @@ To https://github.com/vlad/guacamole
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
-{: .output}
+
 
 > ## Proxy
 >
@@ -118,7 +118,7 @@ Branch master set up to track remote branch master from origin.
 > $ git config --global http.proxy http://user:password@proxy.url
 > $ git config --global https.proxy http://user:password@proxy.url
 > ~~~
-> {: .bash}
+>
 >
 > When you connect to another network that doesn't use a proxy, you will need to
 > tell Git to disable the proxy using:
@@ -127,8 +127,8 @@ Branch master set up to track remote branch master from origin.
 > $ git config --global --unset http.proxy
 > $ git config --global --unset https.proxy
 > ~~~
-> {: .bash}
-{: .callout}
+>
+
 
 > ## Password Managers
 >
@@ -141,7 +141,7 @@ Branch master set up to track remote branch master from origin.
 > ~~~
 > $ unset SSH_ASKPASS
 > ~~~
-> {: .bash}
+>
 >
 > in the terminal, before you run `git push`.  Despite the name, [git uses
 > `SSH_ASKPASS` for all credential
@@ -151,7 +151,7 @@ Branch master set up to track remote branch master from origin.
 >
 > You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
 > to make git default to using the terminal for usernames and passwords.
-{: .callout}
+
 
 Our local and remote repositories are now in this state:
 
@@ -164,21 +164,21 @@ Our local and remote repositories are now in this state:
 > command, and is used to associate the current branch with a remote branch so
 > that the `git pull` command can be used without any arguments. To do this,
 > simply use `git push -u origin master` once the remote has been set up.
-{: .callout}
+
 
 We can pull changes from the remote repository to the local one as well:
 
 ~~~
 $ git pull origin master
 ~~~
-{: .bash}
+
 
 ~~~
 From https://github.com/vlad/guacamole
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
 ~~~
-{: .output}
+
 
 Pulling has no effect in this case because the two repositories are already
 synchronized.  If someone else had pushed some changes to the repository on
@@ -198,8 +198,8 @@ GitHub, though, this command would download them to our local repository.
 > > When you click on the middle button, you'll see all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
 > >
 > > The right-most button lets you view all of the files in the repository at the time of that commit. To do this in the shell, we'd need to checkout the repository at that particular time. We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to look at. If we do this, we need to remember to put the repository back to the right state afterwards!
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## GitHub Timestamp
 >
@@ -211,8 +211,8 @@ GitHub, though, this command would download them to our local repository.
 >
 > > ## Solution
 > > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Push vs. Commit
 >
@@ -221,8 +221,8 @@ GitHub, though, this command would download them to our local repository.
 >
 > > ## Solution
 > > When we push changes, we're interacting with a remote repository to update it with the changes we've made locally (often this corresponds to sharing the changes we've made with others). Commit only updates your local repository.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Fixing Remote Settings
 >
@@ -233,7 +233,7 @@ GitHub, though, this command would download them to our local repository.
 > ~~~
 > git remote add broken https://github.com/this/url/is/invalid
 > ~~~
-> {: .bash}
+>
 >
 > Do you get an error when adding the remote? Can you think of a
 > command that would make it obvious that your remote URL was not
@@ -243,8 +243,8 @@ GitHub, though, this command would download them to our local repository.
 >
 > > ## Solution
 > > We don't see any error message when we add the remote (adding the remote tells git about it, but doesn't try to use it yet). As soon as we try to use ```git push``` we'll see an error message. The command ```git remote set-url``` allows us to change the remote's URL to fix it.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## GitHub License and README files
 >
@@ -254,5 +254,4 @@ GitHub, though, this command would download them to our local repository.
 >
 > > ## Solution
 > > In this case, since we already had a README file in our own (local) repository, we'd see a merge conflict (when git realises that there are two versions of the file and asks us to reconcile the differences).
-> {: .solution}
-{: .challenge}
+>

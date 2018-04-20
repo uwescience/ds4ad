@@ -10,7 +10,7 @@ let's make a change to `ingredients.txt`.
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -18,14 +18,14 @@ tomatoes
 cilantro
 bananas
 ~~~
-{: .output}
+
 
 Now, let's see what we get.
 
 ~~~
 $ git diff HEAD ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -38,7 +38,7 @@ index b36abfd..0848c8d 100644
  cilantro
 +bananas.
 ~~~
-{: .output}
+
 
 which is the same as what you would get if you leave out `HEAD` (try it).  The
 real goodness in all this is when you can refer to previous commits.  We do
@@ -47,7 +47,7 @@ that by adding `~1` to refer to the commit one before `HEAD`.
 ~~~
 $ git diff HEAD~1 ingredients.txt
 ~~~
-{: .bash}
+
 
 If we want to see the differences between older commits we can use `git diff`
 again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
@@ -56,7 +56,7 @@ again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
 ~~~
 $ git diff HEAD~2 ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -69,14 +69,14 @@ index df0654a..b36abfd 100644
 +cilantro
 +bananas
 ~~~
-{: .output}
+
 
 We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
 
 ~~~
 $ git show HEAD~2 ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
@@ -93,7 +93,7 @@ index 0000000..df0654a
 @@ -0,0 +1 @@
 +avocados
 ~~~
-{: .output}
+
 
 In this way,
 we can build up a chain of commits.
@@ -117,7 +117,7 @@ so let's try this:
 ~~~
 $ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -130,7 +130,7 @@ index df0654a..93a3e13 100644
 +cilantro
 +bananas
 ~~~
-{: .output}
+
 
 That's the right answer,
 but typing out random 40-character strings is annoying,
@@ -139,7 +139,7 @@ so Git lets us use just the first few characters:
 ~~~
 $ git diff f22b25e ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -152,7 +152,7 @@ index df0654a..93a3e13 100644
 +cilantro
 +bananas
 ~~~
-{: .output}
+
 
 All right! So
 we can save changes to files and see what we've changed—now how
@@ -163,12 +163,12 @@ Let's suppose we accidentally overwrite our file:
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 lime
 ~~~
-{: .output}
+
 
 `git status` now tells us that the file has been changed,
 but those changes haven't been staged:
@@ -176,7 +176,7 @@ but those changes haven't been staged:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -188,7 +188,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
-{: .output}
+
 
 We can put things back the way they were
 by using `git checkout`:
@@ -197,14 +197,14 @@ by using `git checkout`:
 $ git checkout HEAD ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 tomatoes
 cilantro
 ~~~
-{: .output}
+
 
 As you might guess from its name,
 `git checkout` checks out (i.e., restores) an old version of a file.
@@ -217,22 +217,22 @@ we can use a commit identifier instead:
 ~~~
 $ git checkout f22b25e ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 ~~~
-{: .output}
+
 
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 # On branch master
@@ -246,7 +246,7 @@ Changes to be committed:
 #
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
-{: .output}
+
 
 Notice that the changes are on the staged area.
 Again, we can put things back the way they were
@@ -255,7 +255,7 @@ by using `git checkout`:
 ~~~
 $ git checkout HEAD ingredients.txt
 ~~~
-{: .bash}
+
 
 > ## Don't Lose Your HEAD
 >
@@ -264,7 +264,7 @@ $ git checkout HEAD ingredients.txt
 > ~~~
 > $ git checkout f22b25e ingredients.txt
 > ~~~
-> {: .bash}
+>
 >
 > to revert `ingredients.txt` to its state after the commit `f22b25e`. But be careful!
 > The command `checkout` has other important functionalities and Git will misunderstand
@@ -273,7 +273,7 @@ $ git checkout HEAD ingredients.txt
 > 'detached HEAD' state." It's "look, but don't touch" here, so you shouldn't
 > make any changes in this state.
 > After investigating your repo's past state, reattach your HEAD with ``git checkout master``
-{: .callout}
+
 
 It's important to remember that
 we must use the commit number that identifies the state of the repository
@@ -298,7 +298,7 @@ here's how Git works in cartoon form:
 > ~~~
 > (use "git checkout -- <file>..." to discard changes in working directory)
 > ~~~
-> {: .bash}
+>
 >
 > As it says,
 > `git checkout` without a version identifier restores files to the state saved in `HEAD`.
@@ -306,7 +306,7 @@ here's how Git works in cartoon form:
 > from the command itself:
 > without it,
 > Git would try to use the name of the file as the commit identifier.
-{: .callout}
+
 
 The fact that files can be reverted one by one
 tends to change the way people organize their work.
@@ -336,7 +336,7 @@ moving backward and forward in time becomes much easier.
 > 4. `$ git checkout <unique ID of last commit> data_cruncher.py`
 >
 > 5. Both 2 and 4
-{: .challenge}
+
 
 > ## Reverting a Commit
 >
@@ -359,7 +359,7 @@ moving backward and forward in time becomes much easier.
 > 4. Type in the new commit message.
 >
 > 5. Save and close
-{: .challenge}
+
 
 > ## Understanding Workflow and History
 >
@@ -374,21 +374,21 @@ moving backward and forward in time becomes much easier.
 > $ git checkout HEAD recipe.txt
 > $ cat recipe.txt #this will print the contents of recipe.txt to the screen
 > ~~~
-> {: .bash}
+>
 >
 > 1.
 >
 > ~~~
 > Remove the avocado flesh from the skin with a spoon.
 > ~~~
-> {: .output}
+>
 >
 > 2.
 >
 > ~~~
 > Cut open the avocados and remove the pits.
 > ~~~
-> {: .output}
+>
 >
 > 3.
 >
@@ -396,14 +396,14 @@ moving backward and forward in time becomes much easier.
 > Cut open the avocados and remove the pits.
 > Remove the avocado flesh from the skin with a spoon.
 > ~~~
-> {: .output}
+>
 >
 > 4.
 >
 > ~~~
 > Error because you have changed recipe.txt without committing the changes
 > ~~~
-> {: .output}
+>
 >
 > > ## Solution
 > >
@@ -411,47 +411,47 @@ moving backward and forward in time becomes much easier.
 > > ~~~
 > > $ cd guacamole
 > > ~~~
-> > {: .bash}
+> >
 > > Enters into the 'guacamole' directory
 > >
 > > ~~~
 > > $ nano recipe.txt #input the following text: Cut open the avocados and remove the pits.
 > > ~~~
-> > {: .bash}
+> >
 > > We created a new file and wrote a sentence in it, but the file is not tracked by git.  
 > >
 > > ~~~
 > > $ git add recipe.txt
 > > ~~~
-> > {: .bash}
+> >
 > > Now the file is staged. The changes that have been made to the file until now will be committed in the next commit.
 > >
 > > ~~~
 > > $ nano recipe.txt #add the following text: Remove the avocado flesh from the skin with a spoon.
 > > ~~~
-> > {: .bash}
+> >
 > > The file has been modified. The new changes are not staged because we have not added the file.
 > >
 > > ~~~
 > > $ git commit -m "Describe avocado preparation"
 > > ~~~
-> > {: .bash}
+> >
 > > The changes that were staged (Cut open the avocados and remove the pits.) have been committed. The changes that were not staged (Remove the avocado flesh from the skin with a spoon.) have not. Our local working copy is different than the copy in our local repository.
 > >
 > > ~~~
 > > $ git checkout HEAD recipe.txt
 > > ~~~
-> > {: .bash}
+> >
 > > With checkout we discard the changes in the working directory so that our local copy is exactly the same as our HEAD, the most recent commit.
 > >
 > > ~~~
 > > $ cat recipe.txt #this will print the contents of recipe.txt to the screen
 > > ~~~
-> > {: .bash}
+> >
 > > If we print recipe.txt we will get answer 2.
 > >
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Checking Understanding of `git diff`
 >
@@ -461,7 +461,7 @@ moving backward and forward in time becomes much easier.
 > Try another command, `git diff [ID] ingredients.txt`, where [ID] is replaced with
 > the unique identifier for your most recent commit. What do you think will happen,
 > and what does happen?
-{: .challenge}
+
 
 > ## Getting Rid of Staged Changes
 >
@@ -469,7 +469,7 @@ moving backward and forward in time becomes much easier.
 > been made, but will it also work for changes that have been staged but not committed?
 > Make a change to `ingredients.txt`, add that change, and use `git checkout` to see if
 > you can remove your change.
-{: .challenge}
+
 
 > ## Explore and Summarize Histories
 >
@@ -487,7 +487,7 @@ moving backward and forward in time becomes much easier.
 > ~~~
 > $ git log ingredients.txt
 > ~~~
-> {: .bash}
+>
 >
 > Unfortunately some of these commit messages are very ambiguous e.g. `update files`.
 > How can you search through these files?
@@ -498,7 +498,7 @@ moving backward and forward in time becomes much easier.
 > ~~~
 > $ git log --patch ingredients.txt
 > ~~~
-> {: .bash}
+>
 >
 > You should get a long list of output, and you should be able to see both commit messages and the difference between each commit.
 >
@@ -507,5 +507,4 @@ moving backward and forward in time becomes much easier.
 > ~~~
 > $ git log --patch HEAD~3 *.txt
 > ~~~
-> {: .bash}
-{: .challenge}
+>

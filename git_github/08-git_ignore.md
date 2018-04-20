@@ -7,14 +7,14 @@ Let's create a few dummy files:
 $ mkdir results
 $ touch a.dat b.dat c.dat results/a.out results/b.out
 ~~~
-{: .bash}
+
 
 and see what Git says:
 
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -27,7 +27,7 @@ Untracked files:
 	results/
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
-{: .output}
+
 
 Putting these files under version control would be a waste of disk space.
 What's worse,
@@ -40,13 +40,13 @@ We do this by creating a file in the root directory of our project called `.giti
 $ nano .gitignore
 $ cat .gitignore
 ~~~
-{: .bash}
+
 
 ~~~
 *.dat
 results/
 ~~~
-{: .output}
+
 
 These patterns tell Git to ignore any file whose name ends in `.dat`
 and everything in the `results` directory.
@@ -59,7 +59,7 @@ the output of `git status` is much cleaner:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -69,7 +69,7 @@ Untracked files:
 	.gitignore
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
-{: .output}
+
 
 The only thing Git notices now is the newly-created `.gitignore` file.
 You might think we wouldn't want to track it,
@@ -82,27 +82,27 @@ $ git add .gitignore
 $ git commit -m "Ignore data files and the results folder."
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 # On branch master
 nothing to commit, working directory clean
 ~~~
-{: .output}
+
 
 As a bonus, using `.gitignore` helps us avoid accidentally adding to the repository files that we don't want to track:
 
 ~~~
 $ git add a.dat
 ~~~
-{: .bash}
+
 
 ~~~
 The following paths are ignored by one of your .gitignore files:
 a.dat
 Use -f if you really want to add them.
 ~~~
-{: .output}
+
 
 If we really want to override our ignore settings,
 we can use `git add -f` to force Git to add something. For example,
@@ -112,7 +112,7 @@ We can also always see the status of ignored files if we want:
 ~~~
 $ git status --ignored
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -126,7 +126,7 @@ Ignored files:
 
 nothing to commit, working directory clean
 ~~~
-{: .output}
+
 
 > ## Ignoring Nested Files
 >
@@ -136,7 +136,7 @@ nothing to commit, working directory clean
 > results/data
 > results/plots
 > ~~~
-> {: .bash}
+>
 >
 > How would you ignore only `results/plots` and not `results/data`?
 >
@@ -158,8 +158,8 @@ nothing to commit, working directory clean
 > > Sometimes the `**` pattern comes in handy, too, which matches
 > > multiple directory levels. E.g. `**/results/plots/*` would make git ignore
 > > the `results/plots` directory in any root directory.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Including Specific Files
 >
@@ -175,11 +175,11 @@ nothing to commit, working directory clean
 > > *.data           # ignore all data files
 > > !final.data      # except final.data
 > > ~~~
-> > {: .output}
+> >
 > >
 > > The exclamation point operator will include a previously excluded entry.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Ignoring all data Files in a Directory
 >
@@ -192,7 +192,7 @@ nothing to commit, working directory clean
 > results/data/position/gps/info.txt
 > results/plots
 > ~~~
-> {: .bash}
+>
 >
 > What's the shortest `.gitignore` rule you could write to ignore all `.data`
 > files in `result/data/position/gps`? Do not ignore the `info.txt`.
@@ -201,8 +201,8 @@ nothing to commit, working directory clean
 > >
 > > Appending `results/data/position/gps/*.data` will match every file in `results/data/position/gps` that ends with `.data`.
 > > The file `results/data/position/gps/info.txt` will not be ignored.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## The Order of Rules
 >
@@ -212,7 +212,7 @@ nothing to commit, working directory clean
 > *.data
 > !*.data
 > ~~~
-> {: .bash}
+>
 >
 > What will be the result?
 >
@@ -222,8 +222,8 @@ nothing to commit, working directory clean
 > > Because the `!*.data` entry negates all of the previous `.data` files in the `.gitignore`,
 > > none of them will be ignored, and all `.data` files will be tracked.
 > >
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Log Files
 >
@@ -242,5 +242,4 @@ nothing to commit, working directory clean
 > >
 > > 1. append either `log_*`  or  `log*`  as a new entry in your .gitignore
 > > 3. track `log_01` using   `git add -f log_01`
-> {: .solution}
-{: .challenge}
+>

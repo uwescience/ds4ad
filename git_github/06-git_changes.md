@@ -4,14 +4,14 @@ You should be in the `guacamole` directory.
 ~~~
 $ pwd
 ~~~
-{: .bash}
+
 
 If you are still in `salsa` navigate back up to `guacamole`
 
 ~~~
 $ cd ..
 ~~~
-{: .bash}
+
 
 Let's create a file called `ingredients.txt` that contains some notes
 about the ingredients we will need for guacamole.
@@ -22,36 +22,36 @@ In particular, this does not have to be the `core.editor` you set globally earli
 ~~~
 $ nano ingredients.txt
 ~~~
-{: .bash}
+
 
 Type the text below into the `ingredients.txt` file:
 
 ~~~
 avocados
 ~~~
-{: .output}
+
 
 `ingredients.txt` now contains a single line, which we can see by running:
 
 ~~~
 $ ls
 ~~~
-{: .bash}
+
 
 ~~~
 ingredients.txt
 ~~~
-{: .output}
+
 
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 ~~~
-{: .output}
+
 
 If we check the status of our project again,
 Git tells us that it's noticed the new file:
@@ -59,7 +59,7 @@ Git tells us that it's noticed the new file:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -72,7 +72,7 @@ Untracked files:
 	ingredients.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
-{: .output}
+
 
 The "untracked files" message means that there's a file in the directory
 that Git isn't keeping track of.
@@ -81,14 +81,14 @@ We can tell Git to track a file using `git add`:
 ~~~
 $ git add ingredients.txt
 ~~~
-{: .bash}
+
 
 and then check that the right thing happened:
 
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -101,7 +101,7 @@ Changes to be committed:
 	new file:   ingredients.txt
 
 ~~~
-{: .output}
+
 
 Git now knows that it's supposed to keep track of `ingredients.txt`,
 but it hasn't recorded these changes as a commit yet.
@@ -111,14 +111,14 @@ we need to run one more command:
 ~~~
 $ git commit -m "Start notes on guacamole ingredients"
 ~~~
-{: .bash}
+
 
 ~~~
 [master (root-commit) f22b25e] Start notes on guacamole ingredients
  1 file changed, 1 insertion(+)
  create mode 100644 ingredients.txt
 ~~~
-{: .output}
+
 
 When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
@@ -142,13 +142,13 @@ If we run `git status` now:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
 nothing to commit, working directory clean
 ~~~
-{: .output}
+
 
 it tells us everything is up to date.
 If we want to know what we've done recently,
@@ -157,7 +157,7 @@ we can ask Git to show us the project's history using `git log`:
 ~~~
 $ git log
 ~~~
-{: .bash}
+
 
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
@@ -166,7 +166,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on guacamole ingredients
 ~~~
-{: .output}
+
 
 `git log` lists all commits  made to a repository in reverse chronological order.
 The listing for each commit includes
@@ -184,7 +184,7 @@ and the log message Git was given when the commit was created.
 > in the special `.git` directory mentioned earlier
 > so that our filesystem doesn't become cluttered
 > (and so that we can't accidentally edit or delete an old version).
-{: .callout}
+
 
 Now suppose Dracula adds more information to the file.
 (Again, we'll edit with `nano` and then `cat` the file to show its contents;
@@ -194,13 +194,13 @@ you may use a different editor, and don't need to `cat`.)
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 tomatoes
 ~~~
-{: .output}
+
 
 When we run `git status` now,
 it tells us that a file it already knows about has been modified:
@@ -208,7 +208,7 @@ it tells us that a file it already knows about has been modified:
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -220,7 +220,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
-{: .output}
+
 
 The last line is the key phrase:
 "no changes added to commit".
@@ -236,7 +236,7 @@ of the file and the most recently saved version:
 ~~~
 $ git diff
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -247,7 +247,7 @@ index df0654a..315bf3a 100644
  avocados
 +tomatoes
 ~~~
-{: .output}
+
 
 The output is cryptic because
 it is actually a series of commands for tools like editors and `patch`
@@ -271,7 +271,7 @@ After reviewing our change, it's time to commit it:
 $ git commit -m "Add tomatoes - yum!"
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -283,7 +283,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
-{: .output}
+
 
 Whoops:
 Git won't commit because we didn't use `git add` first.
@@ -293,13 +293,13 @@ Let's fix that:
 $ git add ingredients.txt
 $ git commit -m "Add tomatoes - yum!"
 ~~~
-{: .bash}
+
 
 ~~~
 [master 34961b1] Add tomatoes - yum!
  1 file changed, 1 insertion(+)
 ~~~
-{: .output}
+
 
 Git insists that we add files to the set we want to commit
 before actually committing anything. This allows us to commit our
@@ -336,7 +336,7 @@ but not yet committed.
 > Try to stage things manually,
 > or you might find yourself searching for "git undo commit" more
 > than you would like!
-{: .callout}
+
 
 ![The Git Staging Area](../fig/git-staging-area.svg)
 
@@ -350,19 +350,19 @@ we'll add another line to the file:
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 tomatoes
 cilantro
 ~~~
-{: .output}
+
 
 ~~~
 $ git diff
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -374,7 +374,7 @@ index 315bf3a..b36abfd 100644
  tomatoes
 +cilantro
 ~~~
-{: .output}
+
 
 So far, so good:
 we've added one line to the end of the file
@@ -386,7 +386,7 @@ and see what `git diff` reports:
 $ git add ingredients.txt
 $ git diff
 ~~~
-{: .bash}
+
 
 There is no output:
 as far as Git can tell,
@@ -398,7 +398,7 @@ if we do this:
 ~~~
 $ git diff --staged
 ~~~
-{: .bash}
+
 
 ~~~
 diff --git a/ingredients.txt b/ingredients.txt
@@ -410,7 +410,7 @@ index 315bf3a..b36abfd 100644
  tomatoes
 +cilantro
 ~~~
-{: .output}
+
 
 it shows us the difference between
 the last committed change
@@ -420,33 +420,33 @@ Let's save our changes:
 ~~~
 $ git commit -m "Do not forget the cilantro!!"
 ~~~
-{: .bash}
+
 
 ~~~
 [master 005937f] Do not forget the cilantro!!
  1 file changed, 1 insertion(+)
 ~~~
-{: .output}
+
 
 check our status:
 
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
 nothing to commit, working directory clean
 ~~~
-{: .output}
+
 
 and look at the history of what we've done so far:
 
 ~~~
 $ git log
 ~~~
-{: .bash}
+
 
 ~~~
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
@@ -467,7 +467,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 
     Start notes on guacamole ingredients
 ~~~
-{: .output}
+
 
 > ## Word-based diffing
 >
@@ -475,7 +475,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > diff is too coarse. That is where the `--color-words` option of
 > `git diff` comes in very useful as it highlights the changed
 > words using colors.
-{: .callout}
+
 
 > ## Paging the Log
 >
@@ -488,7 +488,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > *   To move to the next page, press the space bar.
 > *   To search for `some_word` in all pages, type `/some_word`
 >     and navigate through matches pressing `n`.
-{: .callout}
+
 
 > ## Limit Log Size
 >
@@ -500,7 +500,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > $ git log -1
 > ~~~
-> {: .bash}
+>
 >
 > ~~~
 > commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
@@ -509,7 +509,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >
 >    Do not forget the cilantro!!
 > ~~~
-> {: .output}
+>
 >
 > You can also reduce the quantity of information using the
 > `--oneline` option:
@@ -517,13 +517,13 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > $ git log --oneline
 > ~~~
-> {: .bash}
+>
 > ~~~
 > * 005937f Do not forget the cilantro!!
 > * 34961b1 Add tomatoes - yum!
 > * f22b25e Start notes on guacamole ingredients
 > ~~~
-> {: .output}
+>
 >
 > You can also combine the `--oneline` options with others. One useful
 > combination is:
@@ -531,14 +531,14 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > $ git log --oneline --graph --all --decorate
 > ~~~
-> {: .bash}
+>
 > ~~~
 > * 005937f Do not forget the cilantro!! (HEAD, master)
 > * 34961b1 Add tomatoes - yum!
 > * f22b25e Start notes on guacamole ingredients
 > ~~~
-> {: .output}
-{: .callout}
+>
+
 
 > ## Directories
 >
@@ -553,7 +553,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > $ git add directory
 > $ git status
 > ~~~
-> {: .bash}
+>
 >
 > Note, our newly created empty directory `directory` does not appear in
 > the list of untracked files even if we explicitly add it (_via_ `git add`) to our
@@ -569,9 +569,9 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > git add <directory-with-files>
 > ~~~
-> {: .bash}
 >
-{: .callout}
+>
+
 
 To recap, when we want to add changes to our repository,
 we first need to add the changed files to the staging area
@@ -593,8 +593,8 @@ repository (`git commit`):
 > > Answer 1 is not descriptive enough,
 > > and answer 2 is too descriptive and redundant,
 > > but answer 3 is good: short but descriptive.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Committing Changes to Git
 >
@@ -617,8 +617,8 @@ repository (`git commit`):
 > > 2. Would try to create a new repository.
 > > 3. Is correct: first add the file to the staging area, then commit.
 > > 4. Would try to commit a file "my recent changes" with the message myfile.txt.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Committing Multiple Files
 >
@@ -639,47 +639,47 @@ repository (`git commit`):
 > > $ nano ingredients.txt
 > > $ cat ingredients.txt
 > > ~~~
-> > {: .bash}
+> >
 > > ~~~
 > > pepper
 > > salt
 > > ~~~
-> > {: .output}
+> >
 > > ~~~
 > > $ nano directions.txt
 > > $ cat directions.txt
 > > ~~~
-> > {: .bash}
+> >
 > > ~~~
 > > 1. mush it up
 > > ~~~
-> > {: .output}
+> >
 > > Now you can add both files to the staging area. We can do that in one line:
 > >
 > > ~~~
 > > $ git add ingredients.txt directions.txt
 > > ~~~
-> > {: .bash}
+> >
 > > Or with multiple commands:
 > > ~~~
 > > $ git add ingredients.txt
 > > $ git add directions.txt
 > > ~~~
-> > {: .bash}
+> >
 > > Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
 > > ~~~
 > > $ git commit -m "Add seasonings and directions"
 > > ~~~
-> > {: .bash}
+> >
 > > ~~~
 > > [master cc127c2]
 > >  Add seasonings and directions
 > >  2 files changed, 2 insertions(+)
 > >  create mode 100644 directions.txt
 > > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
+> >
+>
+
 
 ## `bio` Repository
 >
@@ -697,7 +697,7 @@ repository (`git commit`):
 > > ~~~
 > > $ cd ..
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > Create a new folder called `bio` and 'move' into it:
 > >
@@ -705,14 +705,14 @@ repository (`git commit`):
 > > $ mkdir bio
 > > $ cd bio
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > Initialise git:
 > >
 > > ~~~
 > > $ git init
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > Create your biography file `me.txt` using `nano` or another text editor.
 > > Once in place, add and commit it to the repository:
@@ -721,7 +721,7 @@ repository (`git commit`):
 > > $ git add me.txt
 > > $ git commit -m'Adding biography file'
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > Modify the file as described (modify one line, add a fourth line).
 > > To display the differences
@@ -730,10 +730,10 @@ repository (`git commit`):
 > > ~~~
 > > $ git diff me.txt
 > > ~~~
-> > {: .bash}
 > >
-> {: .solution}
-{: .challenge}
+> >
+>
+
 
 > ## Author and Committer
 >
@@ -745,14 +745,14 @@ repository (`git commit`):
 > ~~~
 > $ git log --format=full
 > ~~~
-> {: .bash}
+>
 >
 > When committing you can name someone else as the author:
 >
 > ~~~
 > $ git commit --author="Vlad Dracula <vlad@tran.sylvan.ia>"
 > ~~~
-> {: .bash}
+>
 >
 > Create a new repository and create two commits: one without the
 > `--author` option and one by naming a colleague of yours as the
@@ -765,7 +765,7 @@ repository (`git commit`):
 > > $ git add me.txt
 > > $ git commit -m "Update Vlad's bio." --author="Frank N. Stein <franky@monster.com>"
 > > ~~~
-> > {: .bash}
+> >
 > > ~~~
 > > [master 4162a51] Update Vlad's bio.
 > > Author: Frank N. Stein <franky@monster.com>
@@ -784,8 +784,8 @@ repository (`git commit`):
 > >
 > > Vlad's initial bio.
 > > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
+> >
+>
+
 
 [commit-messages]: https://chris.beams.io/posts/git-commit/

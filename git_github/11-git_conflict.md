@@ -12,14 +12,14 @@ repository:
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
 tomatoes
 cilantro
 ~~~
-{: .output}
+
 
 Let's add a line to one partner's copy only:
 
@@ -27,7 +27,7 @@ Let's add a line to one partner's copy only:
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -35,7 +35,7 @@ tomatoes
 cilantro
 lime
 ~~~
-{: .output}
+
 
 and then push the change to GitHub:
 
@@ -43,18 +43,18 @@ and then push the change to GitHub:
 $ git add ingredients.txt
 $ git commit -m "Add a line in our home copy"
 ~~~
-{: .bash}
+
 
 ~~~
 [master 5ae9631] Add a line in our home copy
  1 file changed, 1 insertion(+)
 ~~~
-{: .output}
+
 
 ~~~
 $ git push origin master
 ~~~
-{: .bash}
+
 
 ~~~
 Counting objects: 5, done.
@@ -65,7 +65,7 @@ Total 3 (delta 1), reused 0 (delta 0)
 To https://github.com/vlad/guacamole
    29aba7c..dabb4c8  master -> master
 ~~~
-{: .output}
+
 
 Now let's have the other partner
 make a different change to their copy
@@ -75,7 +75,7 @@ make a different change to their copy
 $ nano ingredients.txt
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -83,7 +83,7 @@ tomatoes
 cilantro
 salt
 ~~~
-{: .output}
+
 
 We can commit the change locally:
 
@@ -91,20 +91,20 @@ We can commit the change locally:
 $ git add ingredients.txt
 $ git commit -m "Add a line in my copy"
 ~~~
-{: .bash}
+
 
 ~~~
 [master 07ebc69] Add a line in my copy
  1 file changed, 1 insertion(+)
 ~~~
-{: .output}
+
 
 but Git won't let us push it to GitHub:
 
 ~~~
 $ git push origin master
 ~~~
-{: .bash}
+
 
 ~~~
 To https://github.com/vlad/guacamole.git
@@ -115,7 +115,7 @@ hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ~~~
-{: .output}
+
 
 ![The Conflicting Changes](../fig/conflict.svg)
 
@@ -129,7 +129,7 @@ Let's start by pulling:
 ~~~
 $ git pull origin master
 ~~~
-{: .bash}
+
 
 ~~~
 remote: Counting objects: 5, done.
@@ -142,7 +142,7 @@ Auto-merging ingredients.txt
 CONFLICT (content): Merge conflict in ingredients.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ~~~
-{: .output}
+
 
 The `git pull` command updates the local repository to include those
 changes already included in the remote repository.
@@ -154,7 +154,7 @@ in the affected file:
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -166,7 +166,7 @@ salt
 lime
 >>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
 ~~~
-{: .output}
+
 
 Our change is preceded by `<<<<<<< HEAD`.
 Git has then inserted `=======` as a separator between the conflicting changes
@@ -184,7 +184,7 @@ Let's replace both so that the file looks like this:
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -192,7 +192,7 @@ tomatoes
 cilantro
 pepper
 ~~~
-{: .output}
+
 
 To finish merging,
 we add `ingredients.txt` to the changes being made by the merge
@@ -202,7 +202,7 @@ and then commit:
 $ git add ingredients.txt
 $ git status
 ~~~
-{: .bash}
+
 
 ~~~
 On branch master
@@ -214,24 +214,24 @@ Changes to be committed:
 	modified:   ingredients.txt
 
 ~~~
-{: .output}
+
 
 ~~~
 $ git commit -m "Merge changes from GitHub"
 ~~~
-{: .bash}
+
 
 ~~~
 [master 2abf2b1] Merge changes from GitHub
 ~~~
-{: .output}
+
 
 Now we can push our changes to GitHub:
 
 ~~~
 $ git push origin master
 ~~~
-{: .bash}
+
 
 ~~~
 Counting objects: 10, done.
@@ -242,7 +242,7 @@ Total 6 (delta 2), reused 0 (delta 0)
 To https://github.com/vlad/guacamole.git
    dabb4c8..2abf2b1  master -> master
 ~~~
-{: .output}
+
 
 Git keeps track of what we've merged with what,
 so we don't have to fix things by hand again
@@ -251,7 +251,7 @@ when the collaborator who made the first change pulls again:
 ~~~
 $ git pull origin master
 ~~~
-{: .bash}
+
 
 ~~~
 remote: Counting objects: 10, done.
@@ -265,14 +265,14 @@ Fast-forward
  ingredients.txt | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
-{: .output}
+
 
 We get the merged file:
 
 ~~~
 $ cat ingredients.txt
 ~~~
-{: .bash}
+
 
 ~~~
 avocados
@@ -280,7 +280,7 @@ tomatoes
 cilantro
 pepper
 ~~~
-{: .output}
+
 
 We don't need to merge again because Git knows someone has already done that.
 
@@ -312,7 +312,7 @@ Conflicts can also be minimized with project management strategies:
 > When asked by your instructor,
 > pull her changes from the repository to create a conflict,
 > then resolve it.
-{: .challenge}
+
 
 > ## Conflicts on Non-textual files
 >
@@ -332,12 +332,12 @@ Conflicts can also be minimized with project management strategies:
 > > $ head --bytes 1024 /dev/urandom > guac.jpg
 > > $ ls -lh guac.jpg
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > -rw-r--r-- 1 vlad 57095 1.0K Mar  8 20:24 guac.jpg
 > > ~~~
-> > {: .output}
+> >
 > >
 > > `ls` shows us that this created a 1-kilobyte file. It is full of
 > > random bytes read from the special file, `/dev/urandom`.
@@ -348,14 +348,14 @@ Conflicts can also be minimized with project management strategies:
 > > $ git add guac.jpg
 > > $ git commit -m "Add picture of guacamole"
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > [master 8e4115c] Add picture of guacamole
 > >  1 file changed, 0 insertions(+), 0 deletions(-)
 > >  create mode 100644 guac.jpg
 > > ~~~
-> > {: .output}
+> >
 > >
 > > Suppose that Wolfman has added a similar picture in the meantime.
 > > His is a picture from a different restaurant, but it is *also* called `guac.jpg`.
@@ -364,7 +364,7 @@ Conflicts can also be minimized with project management strategies:
 > > ~~~
 > > $ git push origin master
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > To https://github.com/vlad/guacamole.git
@@ -376,14 +376,14 @@ Conflicts can also be minimized with project management strategies:
 > > hint: (e.g., 'git pull ...') before pushing again.
 > > hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 > > ~~~
-> > {: .output}
+> >
 > >
 > > We've learned that we must pull first and resolve any conflicts:
 > >
 > > ~~~
 > > $ git pull origin master
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > When there is a conflict on an image or other binary file, git prints
 > > a message like this:
@@ -402,7 +402,7 @@ Conflicts can also be minimized with project management strategies:
 > > CONFLICT (add/add): Merge conflict in guac.jpg
 > > Automatic merge failed; fix conflicts and then commit the result.
 > > ~~~
-> > {: .output}
+> >
 > >
 > > The conflict message here is mostly the same as it was for `ingredients.txt`, but
 > > there is one key additional line:
@@ -425,12 +425,12 @@ Conflicts can also be minimized with project management strategies:
 > > $ git add guac.jpg
 > > $ git commit -m "Use image tastier guacamole"
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > [master 21032c3] Use image tastier guacamole
 > > ~~~
-> > {: .output}
+> >
 > >
 > > If instead we want to use Wolfman's version, we can use `git checkout` with
 > > Wolfman's commit identifier, `439dc8c0`:
@@ -440,12 +440,12 @@ Conflicts can also be minimized with project management strategies:
 > > $ git add guac.jpg
 > > $ git commit -m "Use image prettier guacamole"
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > [master da21b34] Use image prettier guacamole
 > > ~~~
-> > {: .output}
+> >
 > >
 > > We can also keep *both* images. The catch is that we cannot keep them
 > > under the same name. But, we can check out each version in succession
@@ -458,7 +458,7 @@ Conflicts can also be minimized with project management strategies:
 > > $ git checkout 439dc8c0 guac.jpg
 > > $ mv guac.jpg pretty_guac.jpg
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > Then, remove the old `guac.jpg` and add the two new files:
 > >
@@ -468,7 +468,7 @@ Conflicts can also be minimized with project management strategies:
 > > $ git add pretty_guac.jpg
 > > $ git commit -m "Use two images: tasty and pretty"
 > > ~~~
-> > {: .bash}
+> >
 > >
 > > ~~~
 > > [master 94ae08c] Use two images: tasty and pretty
@@ -476,12 +476,12 @@ Conflicts can also be minimized with project management strategies:
 > >  create mode 100644 pretty_guac.jpg
 > >  rename guac.jpg => tasty_guac.jpg (100%)
 > > ~~~
-> > {: .output}
+> >
 > >
 > > Now both images of guacamole are checked into the repository, and `guac.jpg`
 > > no longer exists.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## A Typical Work Session
 >
@@ -522,5 +522,4 @@ Conflicts can also be minimized with project management strategies:
 > > |5    | Update remote     | `git push origin master`                     |
 > > |6    | Celebrate!        | `AFK`                                        |
 > >
-> {: .solution}
-{: .challenge}
+>
