@@ -18,12 +18,10 @@ a command is important. `pwd` shows you where you are:
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
 
 ~~~
 /home/nbuser
 ~~~
-{: .output}
 
 Here,
 the computer's response is `/home/nbuser`,
@@ -38,7 +36,6 @@ which is your **home directory**:
 > (Note that it may look slightly different for different versions of Windows.)
 > In future examples, we've used Linux output as the default - Mac and Windows
 > output may differ slightly, but should be generally similar.  
-{: .callout}
 
 The "home directory" is a user-specific directory where files related to
 that user are stored. It is the default directory when you use the shell.
@@ -66,7 +63,7 @@ because its name begins with `/`.
 > When it appears at the front of a file or directory name,
 > it refers to the root directory. When it appears *inside* a name,
 > it's just a separator.
-{: .callout}
+
 
 Typically, when you open a new command prompt you will be in
 your home directory to start.  
@@ -78,12 +75,12 @@ which stands for "listing":
 ~~~
 $ ls
 ~~~
-{: .language-bash}
+
 
 ~~~
 anaconda2_501  anaconda3_420  anaconda3_501  IfSharp  library  R
 ~~~
-{: .output}
+
 
 `ls` prints the names of the files and directories in the current directory.
 We can make its output more comprehensible by using the **flag** `-F`
@@ -97,12 +94,12 @@ You might recall that we used `ls -F` in an earlier example.
 ~~~
 $ ls -F
 ~~~
-{: .language-bash}
+
 
 ~~~
 anaconda2_501/  anaconda3_420/  anaconda3_501/  IfSharp/  library/  R/
 ~~~
-{: .output}
+
 
 ### Getting help
 
@@ -113,13 +110,13 @@ to use a command and what flags it accepts:
     ~~~
     $ ls --help
     ~~~
-    {: .bash}
+
 
 2. We can read its manual with `man`, such as:
     ~~~
     $ man ls
     ~~~
-    {: .bash}
+
 
 If you use a Mac, or Git for Windows, you might find that only one of these works
 (probably `man` on Mac and `--help` in Windows). We'll describe both ways.
@@ -134,7 +131,7 @@ query will help to find relevant results.
 > [manuals](http://www.gnu.org/manual/manual.html) including the
 > [core GNU utilities](http://www.gnu.org/software/coreutils/manual/coreutils.html),
 > which covers many commands introduced within this lesson.
-{: .callout}
+
 
 #### The `--help` flag
 
@@ -145,7 +142,7 @@ information on how to use the command or program.
 ~~~
 $ ls --help
 ~~~
-{: .language-bash}
+
 
 ~~~
 Usage: ls [OPTION]... [FILE]...
@@ -265,7 +262,7 @@ GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
 Full documentation at: <http://www.gnu.org/software/coreutils/ls>
 or available locally via: info '(coreutils) ls invocation'
 ~~~
-{: .output}
+
 
 > ## Unsupported command-line options
 > If you try to use an option (flag) that is not supported, `ls` and other programs
@@ -274,14 +271,14 @@ or available locally via: info '(coreutils) ls invocation'
 > ~~~
 > $ ls -j
 > ~~~
-> {: .language-bash}
+>
 >
 > ~~~
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ~~~
-> {: .error}
-{: .callout}
+>
+
 
 #### The `man` command
 
@@ -289,7 +286,7 @@ The other way to learn about `ls` is to type
 ~~~
 $ man ls
 ~~~
-{: .bash}
+
 
 This will turn your terminal into a page with a description
 of the `ls` command and its options and, if you're lucky, some examples
@@ -317,8 +314,7 @@ To **quit** the `man` pages, press `q`.
 > > the file/directory names but also additional information such as the file size
 > > and the time of its last modification. The `-h` flag makes the file size
 > > "**h**uman readable", i.e. display something like `5.3K` instead of `5369`.
-> {: .solution}
-{: .challenge}
+
 
 > ## Listing Recursively and By Time
 >
@@ -331,8 +327,6 @@ To **quit** the `man` pages, press `q`.
 >
 > > ## Solution
 > > The files/directories in each directory are sorted by time of last change.
-> {: .solution}
-{: .challenge}
 
 Here,
 we can see that our home directory contains mostly **sub-directories**.
@@ -353,12 +347,12 @@ we want a listing of something other than our current working directory:
 ~~~
 $ ls -F library
 ~~~
-{: .language-bash}
+
 
 ~~~
 README.md
 ~~~
-{: .output}
+
 
 Your output should be a list of all the files and sub-directories in your
 library, including the `README.md` file you created when you set up your library.
@@ -387,7 +381,7 @@ use the following command to get there:
 ~~~
 $ cd library
 ~~~
-{: .language-bash}
+
 
 This commands will move us from our home directory into the `library` directory.  `cd` doesn't print anything,
 but if we run `pwd` after it, we can see that we are now
@@ -399,22 +393,22 @@ because that's where we now are:
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
+
 
 ~~~
 /home/nbuser/library
 ~~~
-{: .output}
+
 
 ~~~
 $ ls -F
 ~~~
-{: .language-bash}
+
 
 ~~~
 README.md
 ~~~
-{: .output}
+
 
 We now know how to go down the directory tree, but
 how do we go up?  We might try the following:
@@ -422,12 +416,12 @@ how do we go up?  We might try the following:
 ~~~
 $ cd nbuser
 ~~~
-{: .language-bash}
+
 
 ~~~
 -bash: cd: nbuser: No such file or directory
 ~~~
-{: .error}
+
 
 But we get an error!  Why is this?  
 
@@ -442,7 +436,7 @@ that looks like this:
 ~~~
 $ cd ..
 ~~~
-{: .language-bash}
+
 
 `..` is a special directory name meaning
 "the directory containing this one",
@@ -454,12 +448,12 @@ if we run `pwd` after running `cd ..`, we're back in `/home/nbuser`:
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
+
 
 ~~~
 /home/nbuser
 ~~~
-{: .output}
+
 
 The special directory `..` doesn't usually show up when we run `ls`.  If we want
 to display it, we can give `ls` the `-a` flag:
@@ -467,7 +461,7 @@ to display it, we can give `ls` the `-a` flag:
 ~~~
 $ ls -F -a
 ~~~
-{: .language-bash}
+
 
 ~~~
 ./              .condarc         .nb.log
@@ -480,7 +474,7 @@ anaconda3_501/  .jupyter/        .profile
 .cache/         library/         .spark/
 .conda/         .local/
 ~~~
-{: .output}
+
 
 `-a` stands for "show all";
 it forces `ls` to show us file and directory names that begin with `.`,
@@ -504,7 +498,7 @@ equivalent to `ls -Fa`.
 > different programs on your computer. The prefix `.` is used to prevent these
 > configuration files from cluttering the terminal when a standard `ls` command
 > is used.
-{: .callout}
+
 
 > ## Orthogonality
 >
@@ -517,7 +511,7 @@ equivalent to `ls -Fa`.
 > programmers say they are **orthogonal**:
 > Orthogonal systems tend to be easier for people to learn
 > because there are fewer special cases and exceptions to keep track of.
-{: .callout}
+
 
 These then, are the basic commands for navigating the filesystem on your computer:
 `pwd`, `ls` and `cd`.  Let's explore some variations on those commands.  What happens
@@ -527,19 +521,19 @@ a directory?
 ~~~
 $ cd
 ~~~
-{: .language-bash}
+
 
 How can you check what happened?  `pwd` gives us the answer!  
 
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
+
 
 ~~~
 /home/nbuser
 ~~~
-{: .output}
+
 
 It turns out that `cd` without an argument will return you to your home directory,
 which is great if you've gotten lost in your own filesystem.  
@@ -553,7 +547,7 @@ to move to `data` in one step:
 ~~~
 $ cd Desktop/data-shell/data
 ~~~
-{: .language-bash}
+
 
 Check that we've moved to the right place by running `pwd` and `ls -F`  
 
@@ -580,17 +574,17 @@ to move to `data-shell`.
 ~~~
 $ pwd
 ~~~
-{: .language-bash}
+
 
 ~~~
 /Users/nelle/Desktop/data-shell/data
 ~~~
-{: .output}
+
 
 ~~~
 $ cd /Users/nelle/Desktop/data-shell
 ~~~
-{: .language-bash}
+
 
 Run `pwd` and `ls -F` to ensure that we're in the directory we expect.  
 
@@ -608,7 +602,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > and forth between directories. The difference between `cd ..` and `cd -` is
 > that the former brings you *up*, while the latter brings you *back*. You can
 > think of it as the *Last Channel* button on a TV remote.
-{: .callout}
+
 
 > ## Absolute vs Relative Paths
 >
@@ -636,8 +630,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > 7. Yes: unnecessarily complicated, but correct.
 > > 8. Yes: shortcut to go back to the user's home directory.
 > > 9. Yes: goes up one level.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## Relative Path Resolution
 >
@@ -657,8 +651,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > >    but with `..` we asked for one level further up.
 > > 3. No: see previous explanation.
 > > 4. Yes: `../backup/` refers to `/Users/backup/`.
-> {: .solution}
-{: .challenge}
+>
+
 
 > ## `ls` Reading Comprehension
 >
@@ -670,7 +664,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > ~~~
 > pnas_sub/ pnas_final/ original/
 > ~~~
-> {: .output}
+>
 >
 > 1.  `ls pwd`
 > 2.  `ls -r -F`
@@ -683,8 +677,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > >     in the current directory.
 > >  3. Yes: uses the absolute path explicitly.
 > >  4. Correct: see explanations above.
-> {: .solution}
-{: .challenge}
+>
+
 
 ### Nelle's Pipeline: Organizing Files
 
@@ -711,7 +705,7 @@ a directory called `revised-revised-results-3`.)
 > if she didn't use leading zeroes,
 > November ('11') would come before July ('7'). Similarly, putting the year first
 > means that June 2012 will come before June 2013.
-{: .callout}
+
 
 Each of her physical samples is labelled according to her lab's convention
 with a unique ten-character ID,
@@ -729,7 +723,7 @@ Nelle can see what files she has using the command:
 ~~~
 $ ls north-pacific-gyre/2012-07-03/
 ~~~
-{: .language-bash}
+
 
 This is a lot to type,
 but she can let the shell do most of the work through what is called **tab completion**.
@@ -738,7 +732,7 @@ If she types:
 ~~~
 $ ls nor
 ~~~
-{: .language-bash}
+
 
 and then presses tab (the tab key on her keyboard),
 the shell automatically completes the directory name for her:
@@ -746,7 +740,7 @@ the shell automatically completes the directory name for her:
 ~~~
 $ ls north-pacific-gyre/
 ~~~
-{: .language-bash}
+
 
 If she presses tab again,
 Bash will add `2012-07-03/` to the command,

@@ -57,7 +57,6 @@ bin/   dev/  home/  lib64/  mnt/  proc/  run/   srv/  tmp/  var/
 boot/  etc/  lib/   media/  opt/  root/  sbin/  sys/  usr/
 nbuser@nbserver:~$
 ~~~
-{: .language-bash}
 
 The first line shows only a **prompt**, indicating that the shell is waiting
 for input. Your shell may use different text for the prompt. Most importantly:
@@ -121,11 +120,9 @@ and then print the prompt and wait for you to enter another command.
 > $ ls-F
 > -bash: ls-F: command not found
 > ~~~
-> {: .language-bash}
 >
 > Usually this means that you have mis-typed the command - in this case we omitted
 > the space between `ls` and `-F`.
-{: .callout}
 
 ### Is it difficult?
 
