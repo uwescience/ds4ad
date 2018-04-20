@@ -44,7 +44,7 @@ The improved version uses a *for loop* to repeat an operation — in this case, 
 for variable in collection:
     do things with variable
 ```
-![loops](./loops.png)
+![loops](loops.png)
 
 where each character (`char`) in the variable `word` is looped through and printed one character after another. The numbers in the diagram denote which loop cycle the character was printed in (1 being the first loop, and 6 being the final loop).
 
