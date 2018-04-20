@@ -71,7 +71,7 @@ x = [['pepper', 'zucchini', 'onion'],
 
 Here is a visual example of how indexing a list of lists `x` works:
 
-![image.png](indexing_lists_python.png)
+![image.png](https://i.stack.imgur.com/6Vwry.png)
 
 Using the previously declared list `x`, these would be the results of the index operations shown in the image:
 
