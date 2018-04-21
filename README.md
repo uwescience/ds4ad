@@ -79,7 +79,7 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 
 ### Day 2: Data munging
 
-9 - noon : introducing Pandas (Bryna)
+9 - noon : Introducing Pandas (Bryna)
 
 - [Using Libraries](pandas_intro/01-libraries.md)
 - [Reading data from csv files](pandas_intro/02-reading-tabular.md)
@@ -88,7 +88,7 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 
 Noon - 1 PM: lunch
 
-1 - 4 PM: manipulating data with Pandas (Ariel)
+1 - 4 PM: [Manipulating data with Pandas](pandas_data_manipulation/README.md) (Ariel)
 
 - Filtering data
 - Merging DataFrames
