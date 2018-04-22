@@ -14,13 +14,13 @@ This course is somewhat based on parts of the
 
 9 - 10: [Introduction](introduction/index.html) (Ariel)
 
-10 - 12: [Foundations of programming in Python](python_programming/README.md)(Jose)
+10 - 12: Foundations of programming in Python (Jose)
 
-- Variables and variable assignment
-- Repeating actions with loops
-- Storing multiple values in a list
-- Making choices
-- Creating functions
+- [Introduction](python_programming/001-introduction.md)
+- [Loops](python_programming/002-loops.md)
+- [Storing Values](python_programming/003-StoringValues.md)
+- [Making Choices](python_programming/004-MakingChoices.md)
+- [Functions](python_programming/005-functions.md)
 
 Noon - 1 PM lunch
 
@@ -39,13 +39,30 @@ Noon - 1 PM lunch
 
 #### Homework day 1: 
 
-**Code Challenges** 
-
-TODO 
-
 **Set up your own GitHub project** 
 
-TODO
+- Start a repository on GitHub
+- In this repository, solve the following code challenges
+
+**Code Challenges**  
+
+- If the variable s refers to a string, then s[0] is the string’s first character and s[-1] is its last. Write a function called `outer` that returns a string made up of just the first and last characters of its input. A call to your function should look like this:
+
+```
+>>> print(outer('helium'))
+```
+```
+hm
+```
+
+- "Adding” two strings produces their concatenation: 'a' + 'b' is 'ab'. Write a function called `fence` that takes two parameters called original and wrapper and returns a new string that has the wrapper character at the beginning and end of the original. A call to your function should look like this:
+
+```
+>>> print(fence('name', '*'))
+```
+```
+*name*
+```
 
 **Bring a use-case**
 
