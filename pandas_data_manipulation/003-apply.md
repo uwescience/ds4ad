@@ -182,9 +182,9 @@ A datetime object has an attribute `year` that gives you the year of that `datet
 
 Using the `apply` function, create columns in the `DataFramer` for `dob_year`, `dob_month` and `dob_day` each represented as an integer. 
 
-If you are done with that, calculate another column for `age` (based on the present day). Hint 
+If you are done with that, calculate another column for `age` (based on the present day). 
 
-pd.datetime(2018, 4, 24) - pd.datetime(1977, 12, 9) will give you back a `timedelta` object
+**Hint**: pd.datetime(2018, 4, 24) - pd.datetime(1977, 12, 9) will give you back a `timedelta` object
 
 
 
