@@ -129,4 +129,18 @@ pd.merge(df1, df4, on=["B", "D"], how="outer")
 In this case, it does exactly the same as not specifying the merge keys.
 
 
+### Exercise: 
+
+Read in the data from: 
+
+`https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_services.csv`
+
+This table includes data about these individuals use of services ("library" and "parking"). 
+Use merging to combine the data. What would you need to do to find the address of people who've used the library in 2018? 
+
+Things to think about: 
+
+- Which table should we merge into which table?
+- How do we figure out the year of a services? 
+
 
