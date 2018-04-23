@@ -28,7 +28,11 @@ plt.ylabel('Position (km)')
 ```python
 import pandas
 
-data = pandas.read_csv('')
+data = pandas.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv', nrows=2)
+print(data)
+```
+
+```python
 data.plot() # will need a transpose
 plt.ylabel('')
 plt.xticks(rotation=90)

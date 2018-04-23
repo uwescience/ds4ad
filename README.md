@@ -14,63 +14,87 @@ This course is somewhat based on parts of the
 
 9 - 10: [Introduction](introduction/index.html) (Ariel)
 
-10 - 12: [Foundations of programming in Python](python_programming/README.md)(Jose)
+10 - 12: Foundations of programming in Python (Jose)
 
-- Variables and variable assignment
-- Repeating actions with loops
-- Storing multiple values in a list
-- Making choices
-- Creating functions
+- [Introduction](python_programming/001-introduction.md)
+- [Loops](python_programming/002-loops.md)
+- [Storing Values](python_programming/003-StoringValues.md)
+- [Making Choices](python_programming/004-MakingChoices.md)
+- [Functions](python_programming/005-functions.md)
 
 Noon - 1 PM lunch
 
 1 - 4 : git and GitHub (Bryna)
 
-- Navigating the file system in the shell
-- Introducing version control
-- Configuring git
-- Setting up a repository
-- Tracking changes
-- Exploring history
-- Ignoring things
-- Remotes on Github
-- Collaborating on Github
-- Merge conflicts and conflict resolution
+- [Intro to the shell](git_github/01-shell_intro.md)
+- [Navigating the file system in the shell](git_github/02-shell_filedir.md)
+- [Introducing version control](git_github/03-git_basics.md)
+- [Configuring git](git_github/04-git_setup.md)
+- [Setting up a repository](git_github/05-git_create.md)
+- [Tracking changes](git_github/06-git_changes.md)
+- [Exploring history](git_github/07-git_history.md)
+- [Ignoring things](git_github/08-git_ignore.md)
+- [Remotes on Github](git_github/09-github.md)
+- [Collaborating on Github](git_github/10-git_collab.md)
+- [Merge conflicts and conflict resolution](git_github/11-git_conflict.md)
 
-#### Homework day 1: 
 
-**Code Challenges** 
+#### Homework day 1:
 
-TODO 
+**Set up your own GitHub project**
 
-**Set up your own GitHub project** 
+- Start a repository on GitHub
+- In this repository, solve the following code challenges
 
-TODO
+**Code Challenges**  
+
+- If the variable s refers to a string, then s[0] is the string’s first character and s[-1] is its last. Write a function called `outer` that returns a string made up of just the first and last characters of its input. A call to your function should look like this:
+
+```
+>>> print(outer('helium'))
+```
+```
+hm
+```
+
+- "Adding” two strings produces their concatenation: 'a' + 'b' is 'ab'. Write a function called `fence` that takes two parameters called original and wrapper and returns a new string that has the wrapper character at the beginning and end of the original. A call to your function should look like this:
+
+```
+>>> print(fence('name', '*'))
+```
+```
+*name*
+```
 
 **Bring a use-case**
 
-Tomorrow, tell us about a data use-case that you have in mind for your work: 
+Tomorrow, tell us about a data use-case that you have in mind for your work:
 
 1. What is the data?
 2. What are some questions you would like to answer with these data?
-3. How is the data currently stored? 
+3. How is the data currently stored?
 
 ### Day 2: Data munging
 
-9 - noon : introducing Pandas (Bryna)
+9 - noon : Introducing Pandas (Bryna)
 
-- Reading data from csv files
-- Indexing in Pandas DataFrames
+- [Using Libraries](pandas_intro/01-libraries.md)
+- [Reading data from csv files](pandas_intro/02-reading-tabular.md)
+- [Indexing in Pandas DataFrames](pandas_intro/03-data-frames.md)
+- [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split-apply-combine.md)
 
 Noon - 1 PM: lunch
 
-1 - 4 PM: manipulating data with Pandas (Ariel)
+1 - 4 PM: [Manipulating data with Pandas](pandas_data_manipulation/README.md) (Ariel)
 
-- Filtering data
-- Merging DataFrames
-- Groupby and [Split-apply-combine](https://pandas.pydata.org/pandas-docs/stable/groupby.html)
+- [Introduction](pandas_data_manipulation/001-introduction.md)
+- [Filtering](pandas_data_manipulation/002-filtering.md)
+- [Combining data](pandas_data_manipulation/003-merging.md)
+- [Record linkage](pandas_data_manipulation/004-deduplication-recrod-linkage.md)
 
 *Homework: Code challenges (with a focus on data munging)*
+
+
 
 ### Day 3: Data analysis and data visualization
 
