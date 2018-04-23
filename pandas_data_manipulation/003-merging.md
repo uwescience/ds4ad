@@ -140,7 +140,11 @@ Use merging to combine the data. What would you need to do to find the address o
 
 Things to think about: 
 
-- Which table should we merge into which table?
 - How do we figure out the year of a services? 
+- Which table should we merge into which table?
+- Do you want to do an "inner" or "outer" merge?
+- How do we deal with the fact that the key has a different name in the two tables (hint: `merge` has `left_on` and `right_on` keyword arguments)?
+- How many service records are there? What is the shape of the outcome? Why is this not the same? 
+
 
 
