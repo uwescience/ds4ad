@@ -162,11 +162,62 @@ rec-3004-org     aleisha     hobson           54.0
 rec-1384-org       ethan    gazzola           49.0
 ~~~
 
+Now do something similar with iloc:
+
+~~~
+print(data.iloc[0:4, 0:2])
+~~~
+
+~~~
+              given_name    surname
+rec_id                             
+rec-2778-org       sarah      bruhn
+rec-712-dup-0      jacob     lanyon
+rec-1321-org     brinley  efthimiou
+rec-3004-org     aleisha     hobson
+~~~
 
 In the above code, we discover that **slicing using `loc` is inclusive at both
 ends**, which differs from **slicing using `iloc`**, where slicing indicates
 everything up to but not including the final index.
 
+
+## Selecting non-contiguous rows and columns
+
+You can also pass a list of row or column labels to get the rows and columns you want in the order you want:
+
+~~~
+print(data.loc['rec-2778-org':'rec-1384-org', ['soc_sec_id', 'surname', 'salary']])
+~~~
+
+~~~
+               soc_sec_id    surname  salary
+rec_id                                      
+rec-2778-org      7535316      bruhn  136344
+rec-712-dup-0     9497788     lanyon   59079
+rec-1321-org      6814956  efthimiou   39987
+rec-3004-org      5967384     hobson   47962
+rec-1384-org      3832742    gazzola   39988
+~~~
+
+Or if we wanted this information on people named Courtney, we could find those indexes and use them for the row selection:
+
+print(data[data.given_name == 'courtney'].index)
+
+Index(['rec-1721-org', 'rec-548-org', 'rec-101-org', 'rec-2312-org',
+       'rec-1520-org'],
+      dtype='object', name='rec_id')
+
+print(data.loc[['rec-1721-org', 'rec-548-org', 'rec-101-org', 'rec-2312-org',
+       'rec-1520-org'], ['soc_sec_id', 'surname', 'salary']])
+
+              soc_sec_id    surname  salary
+rec_id                                     
+rec-1721-org     1564113  sebastyan   45003
+rec-548-org      8735103  le lievre   45414
+rec-101-org      3854639    campain   13833
+rec-2312-org     8820005     robson   45699
+rec-1520-org     8729844  mulquiney   45701
 
 ## Result of slicing can be used in further operations.
 
@@ -176,25 +227,26 @@ everything up to but not including the final index.
 *   E.g., calculate max of a slice.
 
 ~~~
-print(data.loc['rec-2778-org':'rec-1384-org', 'given_name':'street_number'].max())
+print(data.loc['rec-2778-org':'rec-1384-org', ['given_name', 'surname', 'salary']].max())
 ~~~
 
 ~~~
-given_name        sarah
-surname          lanyon
-street_number        54
+given_name     sarah
+surname       lanyon
+salary        136344
 dtype: object
 ~~~
 
+Note that the max is only performed on the salary because it's the only numeric column in the slice.
 
 ~~~
-print(data.loc['rec-2778-org':'rec-1384-org', 'given_name':'street_number'].min())
+print(data.loc['rec-2778-org':'rec-1384-org', ['given_name', 'surname', 'salary']].min())
 ~~~
 
 ~~~
-given_name       aleisha
-surname            bruhn
-street_number          5
+given_name    aleisha
+surname         bruhn
+salary          39987
 dtype: object
 ~~~
 
@@ -206,7 +258,7 @@ dtype: object
 
 ~~~
 # Use a subset of data to keep output readable.
-subset = data.loc['rec-2778-org':'rec-1384-org', 'soc_sec_id':'salary']
+subset = data.loc['rec-2778-org':'rec-1384-org', ['soc_sec_id','salary']]
 print('Subset of data:\n', subset)
 
 # Which values were greater than 50000 ?
@@ -215,22 +267,22 @@ print('\nWhere are values large?\n', subset > 50000)
 
 ~~~
 Subset of data:
-                soc_sec_id  gender  salary
-rec_id                                   
-rec-2778-org      7535316  female  136344
-rec-712-dup-0     9497788    male   59079
-rec-1321-org      6814956    male   39987
-rec-3004-org      5967384  female   47962
-rec-1384-org      3832742    male   39988
+                soc_sec_id  salary
+rec_id                           
+rec-2778-org      7535316  136344
+rec-712-dup-0     9497788   59079
+rec-1321-org      6814956   39987
+rec-3004-org      5967384   47962
+rec-1384-org      3832742   39988
 
 Where are values large?
-                soc_sec_id  gender  salary
-rec_id                                   
-rec-2778-org         True    True    True
-rec-712-dup-0        True    True    True
-rec-1321-org         True    True   False
-rec-3004-org         True    True   False
-rec-1384-org         True    True   False
+                soc_sec_id  salary
+rec_id                           
+rec-2778-org         True    True
+rec-712-dup-0        True    True
+rec-1321-org         True   False
+rec-3004-org         True   False
+rec-1384-org         True   False
 ~~~
 
 
@@ -244,13 +296,13 @@ print(subset[mask])
 ~~~
 
 ~~~
-soc_sec_id  gender    salary
-rec_id                                     
-rec-2778-org      7535316  female  136344.0
-rec-712-dup-0     9497788    male   59079.0
-rec-1321-org      6814956    male       NaN
-rec-3004-org      5967384  female       NaN
-rec-1384-org      3832742    male       NaN
+               soc_sec_id    salary
+rec_id                             
+rec-2778-org      7535316  136344.0
+rec-712-dup-0     9497788   59079.0
+rec-1321-org      6814956       NaN
+rec-3004-org      5967384       NaN
+rec-1384-org      3832742       NaN
 ~~~
 
 
