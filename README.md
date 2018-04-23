@@ -1,7 +1,5 @@
 # Data science for administrative datasets
 
-## 3-day program for a course on data science
-
 This course is somewhat based on parts of the
 [Software Carpentry](https://software-carpentry.org/) curriculum.
 
@@ -81,7 +79,7 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 - [Using Libraries](pandas_intro/01-libraries.md)
 - [Reading data from csv files](pandas_intro/02-reading-tabular.md)
 - [Indexing in Pandas DataFrames](pandas_intro/03-data-frames.md)
-- [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split-apply-combine.md)
+- [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split_apply_combine.md)
 
 Noon - 1 PM: lunch
 
@@ -92,13 +90,21 @@ Noon - 1 PM: lunch
 - [Combining data](pandas_data_manipulation/003-merging.md)
 - [Record linkage](pandas_data_manipulation/004-deduplication-recrod-linkage.md)
 
-*Homework: Code challenges (with a focus on data munging)*
+#### Homework day 1:
 
+**Set up your own GitHub project**
 
 
 ### Day 3: Data analysis and data visualization
 
-9 - noon : Extracting statistics from Pandas DataFrames (Ariel)
+9 - noon : Computations and statistics with Pandas DataFrames (Ariel)
+
+- [Introduction](pandas_statistics/001-introduction.md)
+- [Arithmetic](pandas_statistics/002-arithmetic.md)
+- [Counting](pandas_statistics/003-counting.md)
+- [Correlations](pandas_statistics/004-counting.md)
+- [Modeling](pandas_statistics/005-statsmodels.md)
+
 
 Noon - 1 PM: lunch
 
