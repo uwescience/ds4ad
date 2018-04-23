@@ -202,15 +202,22 @@ rec-1384-org      3832742    gazzola   39988
 
 Or if we wanted this information on people named Courtney, we could find those indexes and use them for the row selection:
 
+~~~
 print(data[data.given_name == 'courtney'].index)
+~~~
 
+~~~
 Index(['rec-1721-org', 'rec-548-org', 'rec-101-org', 'rec-2312-org',
        'rec-1520-org'],
       dtype='object', name='rec_id')
+~~~
 
+~~~
 print(data.loc[['rec-1721-org', 'rec-548-org', 'rec-101-org', 'rec-2312-org',
        'rec-1520-org'], ['soc_sec_id', 'surname', 'salary']])
+~~~
 
+~~~
               soc_sec_id    surname  salary
 rec_id                                     
 rec-1721-org     1564113  sebastyan   45003
@@ -218,6 +225,7 @@ rec-548-org      8735103  le lievre   45414
 rec-101-org      3854639    campain   13833
 rec-2312-org     8820005     robson   45699
 rec-1520-org     8729844  mulquiney   45701
+~~~
 
 ## Result of slicing can be used in further operations.
 
