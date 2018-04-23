@@ -92,8 +92,9 @@ Noon - 1 PM: lunch
 - [Combining data](pandas_data_manipulation/003-merging.md)
 - [Record linkage](pandas_data_manipulation/004-deduplication-recrod-linkage.md)
 
-*Homework: Code challenges (with a focus on data munging)*
+#### Homework day 1:
 
+**Set up your own GitHub project**
 
 
 ### Day 3: Data analysis and data visualization
