@@ -1,7 +1,5 @@
 # Data science for administrative datasets
 
-## 3-day program for a course on data science
-
 This course is somewhat based on parts of the
 [Software Carpentry](https://software-carpentry.org/) curriculum.
 
@@ -99,7 +97,14 @@ Noon - 1 PM: lunch
 
 ### Day 3: Data analysis and data visualization
 
-9 - noon : Extracting statistics from Pandas DataFrames (Ariel)
+9 - noon : Computations and statistics with Pandas DataFrames (Ariel)
+
+- [Introduction](pandas_statistics/001-introduction.md)
+- [Arithmetic](pandas_statistics/002-arithmetic.md)
+- [Counting](pandas_statistics/003-counting.md)
+- [Correlations](pandas_statistics/004-counting.md)
+- [Modeling](pandas_statistics/005-statsmodels.md)
+
 
 Noon - 1 PM: lunch
 
