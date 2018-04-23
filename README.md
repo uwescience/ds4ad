@@ -26,20 +26,25 @@ Noon - 1 PM lunch
 
 1 - 4 : git and GitHub (Bryna)
 
-- Navigating the file system in the shell
-- Introducing version control
-- Configuring git
-- Setting up a repository
-- Tracking changes
-- Exploring history
-- Ignoring things
-- Remotes on Github
-- Collaborating on Github
-- Merge conflicts and conflict resolution
+- [Intro to the shell](git_github/01-shell_intro.md)
+- [Navigating the file system in the shell](git_github/02-shell_filedir.md)
+- [Introducing version control](git_github/03-git_basics.md)
+- [Configuring git](git_github/04-git_setup.md)
+- [Setting up a repository](git_github/05-git_create.md)
+- [Tracking changes](git_github/06-git_changes.md)
+- [Exploring history](git_github/07-git_history.md)
+- [Ignoring things](git_github/08-git_ignore.md)
+- [Remotes on Github](git_github/09-github.md)
+- [Collaborating on Github](git_github/10-git_collab.md)
+- [Merge conflicts and conflict resolution](git_github/11-git_conflict.md)
 
-#### Homework day 1: 
+#### Homework day 1:
 
-**Set up your own GitHub project** 
+**Code Challenges**
+
+#### Homework day 1:
+
+**Set up your own GitHub project**
 
 - Start a repository on GitHub
 - In this repository, solve the following code challenges
@@ -66,11 +71,11 @@ hm
 
 **Bring a use-case**
 
-Tomorrow, tell us about a data use-case that you have in mind for your work: 
+Tomorrow, tell us about a data use-case that you have in mind for your work:
 
 1. What is the data?
 2. What are some questions you would like to answer with these data?
-3. How is the data currently stored? 
+3. How is the data currently stored?
 
 ### Day 2: Data munging
 
