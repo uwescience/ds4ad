@@ -10,6 +10,8 @@
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
 
+We're only going read the first 2 rows initially (using `nrows=2`) to get a sense of the data.
+
 ~~~
 import pandas
 
@@ -61,7 +63,6 @@ rec-712-dup-0  beaconsfield upper      2602   vic       19080712     9497788
 rec_id                         
 rec-2778-org   female  136344  
 rec-712-dup-0    male   59079  
-
 ​~~~
 
 
