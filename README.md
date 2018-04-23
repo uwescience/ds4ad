@@ -38,9 +38,6 @@ Noon - 1 PM lunch
 - [Collaborating on Github](git_github/10-git_collab.md)
 - [Merge conflicts and conflict resolution](git_github/11-git_conflict.md)
 
-#### Homework day 1:
-
-**Code Challenges**
 
 #### Homework day 1:
 
@@ -90,11 +87,14 @@ Noon - 1 PM: lunch
 
 1 - 4 PM: [Manipulating data with Pandas](pandas_data_manipulation/README.md) (Ariel)
 
-- Filtering data
-- Merging DataFrames
-- Groupby and [Split-apply-combine](https://pandas.pydata.org/pandas-docs/stable/groupby.html)
+- [Introduction](pandas_data_manipulation/001-introduction.md)
+- [Filtering](pandas_data_manipulation/002-filtering.md)
+- [Combining data](pandas_data_manipulation/003-merging.md)
+- [Record linkage](pandas_data_manipulation/004-deduplication-recrod-linkage.md)
 
 *Homework: Code challenges (with a focus on data munging)*
+
+
 
 ### Day 3: Data analysis and data visualization
 
