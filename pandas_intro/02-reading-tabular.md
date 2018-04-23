@@ -12,14 +12,14 @@
 
 We're only going read the first 2 rows initially (using `nrows=2`) to get a sense of the data.
 
-```
+~~~
 import pandas
 
 data = pandas.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv', nrows=2)
 print(data)
-```
+~~~
 
-```
+~~~
           rec_id given_name surname  street_number      address_1   address_2  \
 0   rec-2778-org      sarah   bruhn             44  forbes street  wintersloe   
 1  rec-712-dup-0      jacob  lanyon              5     milne cove     wellwod   
@@ -31,7 +31,7 @@ print(data)
    salary  
 0  136344  
 1   59079  
-```
+~~~
 
 
 *   The columns in a dataframe are the observed variables, and the rows are the observations.
@@ -43,12 +43,12 @@ print(data)
 *   Really want to index by rec_id.
 *   Pass the name of the column to `read_csv` as its `index_col` parameter to do this.
 
-```
+~~~
 data = pandas.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv', index_col='rec_id', nrows=2)
 print(data)
-```
+~~~
 
-```
+~~~
               given_name surname  street_number      address_1   address_2  \
 rec_id                                                                       
 rec-2778-org       sarah   bruhn             44  forbes street  wintersloe   
@@ -63,16 +63,16 @@ rec-712-dup-0  beaconsfield upper      2602   vic       19080712     9497788
 rec_id                         
 rec-2778-org   female  136344  
 rec-712-dup-0    male   59079  
-​```
-
+​~~~
+~~~
 
 ## Use `DataFrame.info` to find out more about a dataframe.
 
-```
+~~~
 data.info()
-```
+~~~
 
-```
+~~~
 <class 'pandas.core.frame.DataFrame'>
 Index: 2 entries, rec-2778-org to rec-712-dup-0
 Data columns (total 12 columns):
@@ -90,7 +90,7 @@ gender           2 non-null object
 salary           2 non-null int64
 dtypes: int64(5), object(7)
 memory usage: 208.0+ bytes
-```
+~~~
 
 
 *   This is a `DataFrame`
