@@ -2,8 +2,7 @@
 
 The `apply` function allows us to repeatedly use a function over all the columns in a `DataFrame`. 
 
-This can also be used for data cleaning. For example, consider the `date_of_birth` column. 
-Inspecting a few examples from this column will reveal the logic of this column: 
+This can also be used for data cleaning. For example, consider the `date_of_birth` column. Remember from our previous section that this is represented as a floating point number with year, followed by month, followed by day:  
 
 ```
 df["date_of_birth"].head()
@@ -16,8 +15,6 @@ df["date_of_birth"].head()
 4    19631225.0
 Name: date_of_birth, dtype: float64
 ```
-
-It seems that the dates are represented as floating point numbers, with the first 4 digits representing the year, the second two digits representing month and the last two digits representing the day.
 
 How would we go about cleaning this column and producing something that can be used?   
 
@@ -44,6 +41,11 @@ def dob(row):
     day = int(dob_as_str[6:])
     return pd.datetime(year, month, day)
 ```
+
+```
+pandas.to_datetime(data.date_of_birth.astype(str), format='%Y%m%d')
+```
+
 
 But we would like to run this function over every line of the file! This is where the `apply` 
 function comes in. This function allows you to apply a function to each row in a table: 
