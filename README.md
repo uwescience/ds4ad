@@ -81,8 +81,9 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 
 9 - noon : introducing Pandas (Bryna)
 
-- Reading data from csv files
-- Indexing in Pandas DataFrames
+- [Using Libraries](pandas_intro/01-libraries.md)
+- [Reading data from csv files](pandas_intro/02-reading-tabular.md)
+- [Indexing in Pandas DataFrames](pandas_intro/03-data-frames.md)
 
 Noon - 1 PM: lunch
 
