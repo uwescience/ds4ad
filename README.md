@@ -81,7 +81,7 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 - [Using Libraries](pandas_intro/01-libraries.md)
 - [Reading data from csv files](pandas_intro/02-reading-tabular.md)
 - [Indexing in Pandas DataFrames](pandas_intro/03-data-frames.md)
-- [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split-apply-combine.md)
+- [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split_apply_combine.md)
 
 Noon - 1 PM: lunch
 
