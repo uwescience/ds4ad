@@ -14,7 +14,7 @@ dataset?
 We'll read again the synthetic data that we used in previous lessons: 
 
 ```
-df = pd.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv', index_col="rec_id")
 ```
 
 Salary values that are lower than 0 (negative salaries!) are probably erroneous. 
