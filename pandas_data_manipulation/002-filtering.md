@@ -15,7 +15,6 @@ We'll read again the synthetic data that we used in previous lessons:
 
 ```
 df = pd.read_csv('https://raw.githubusercontent.com/uwescience/ds4ad/master/data/synthetic_data.csv', index_col="rec_id")
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c
 ```
 
 Salary values that are lower than 0 (negative salaries!) are probably erroneous. 

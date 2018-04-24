@@ -145,4 +145,3 @@ Things to think about:
 - Do you want to do an "inner" or "outer" merge?
 - How do we deal with the fact that the key has a different name in the two tables (hint: `merge` has `left_on` and `right_on` keyword arguments)?
 - How many service records are there? What is the shape of the outcome? Why is this not the same? 
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c

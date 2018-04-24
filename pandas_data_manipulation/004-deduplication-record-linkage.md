@@ -175,4 +175,3 @@ Can you find problems with this linkage? What would you do improve the linkage?
 - Try blocking on other variables. 
 - Try adjusting the matching thresholds.
 - Try using other matching variables. 
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c

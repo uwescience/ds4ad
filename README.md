@@ -58,7 +58,6 @@ hm
 
 - "Adding” two strings produces their concatenation: 'a' + 'b' is 'ab'. Write a function called `fence` that takes two parameters called original and wrapper and returns a new string that has the wrapper character at the beginning and end of the original. A call to your function should look like this:
 
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c
 ```
 >>> print(fence('name', '*'))
 ```
@@ -82,7 +81,6 @@ Tomorrow, tell us about a data use-case that you have in mind for your work:
 - [Reading data from csv files](pandas_intro/02-reading-tabular.md)
 - [Indexing in Pandas DataFrames](pandas_intro/03-data-frames.md)
 - [Split-apply-combine with Pandas DataFrames](pandas_intro/04-split_apply_combine.md)
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c
 
 Noon - 1 PM: lunch
 
@@ -96,7 +94,6 @@ Noon - 1 PM: lunch
 #### Homework day 1:
 
 **Set up your own GitHub project**
->>>>>>> bd1d5bcc9ad868d4df53b2ba02b681524000973c
 
 
 
