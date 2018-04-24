@@ -88,7 +88,7 @@ Noon - 1 PM: lunch
 - [Introduction](pandas_data_manipulation/001-introduction.md)
 - [Filtering](pandas_data_manipulation/002-filtering.md)
 - [Combining data](pandas_data_manipulation/003-merging.md)
-- [Record linkage](pandas_data_manipulation/004-deduplication-recrod-linkage.md)
+- [Record linkage](pandas_data_manipulation/004-deduplication-record-linkage.md)
 
 #### Homework day 1:
 
