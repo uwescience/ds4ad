@@ -114,6 +114,7 @@ Noon - 1 PM: lunch
 Afternoon:
 
 1 PM - 2:30 Visualizing data with Matplotlib (Jose)
+
 -[Introduction](viz_matplotlib/001-introduction.md)
 -[Customizing](viz_matplotlib/002-customizing.md)
 -[Plotting from Pandas](viz_matplotlib/003-plottingfrompandas.md)
