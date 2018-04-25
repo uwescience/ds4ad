@@ -37,6 +37,7 @@ Noon - 1 PM lunch
 - [Merge conflicts and conflict resolution](git_github/11-git_conflict.md)
 
 
+
 #### Homework day 1:
 
 **Set up your own GitHub project**
@@ -95,6 +96,8 @@ Noon - 1 PM: lunch
 **Set up your own GitHub project**
 
 
+
+
 ### Day 3: Data analysis and data visualization
 
 9 - noon : Computations and statistics with Pandas DataFrames (Ariel)
@@ -111,5 +114,9 @@ Noon - 1 PM: lunch
 Afternoon:
 
 1 PM - 2:30 Visualizing data with Matplotlib (Jose)
+
+- [Introduction](viz_matplotlib/001-introduction.md)
+- [Customizing](viz_matplotlib/002-customizing.md)
+- [Plotting from Pandas](viz_matplotlib/003-plottingfrompandas.md)
 
 2:30 - 4 Next steps -- where do we go from here? (Bryna + Jose (+ Ariel))
