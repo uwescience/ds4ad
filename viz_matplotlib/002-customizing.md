@@ -42,6 +42,7 @@ plt.plot('time', 'distance', data = df2, marker= 'o', linestyle= 'dashed')
 plt.xlabel('Time (hr)')
 plt.ylabel('Distance (km)')
 ```
+![png](figures/output_9_1.png)
 
 We can add a title using `plt.title`.
 ```python
@@ -51,6 +52,8 @@ plt.xlabel('Time (hr)')
 plt.ylabel('Distance (km)')
 plt.title('Object Distances(km) by Time(hr)')
 ```
+![png](figures/output_11_1.png)
+
 we can add a legend by adding `label` to our plots and `plt.legend`.
 ```python
 plt.plot('time', 'distance', data=df1, marker = 'o', linestyle = 'dashed', label = 'Object A')

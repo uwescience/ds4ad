@@ -16,12 +16,14 @@ This gives us a histogram of the column `salary`.
 ```python
 df3["salary"].plot(kind='hist')
 ```
-![png](figures/output_20_1.png)
+![png](figures/output_19_1.png)
 
 This gives us a histogram of the column `tax_rate`.
 ```python
 df3["tax_rate"].plot(kind='hist')
 ```
+![png](figures/output_20_1.png)
+
 You can get boxplots by setting the `kind` parameter to 'box'. 
 ```python
 df3['salary'].plot(kind = 'box')
