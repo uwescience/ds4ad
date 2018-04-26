@@ -18,7 +18,7 @@ This course is somewhat based on parts of the
 - [Loops](python_programming/002-loops.md)
 - [Storing Values](python_programming/003-StoringValues.md)
 - [Making Choices](python_programming/004-MakingChoices.md)
-- [Functions](python_programming/005-functions.md)
+- [Functions](python_programming/005-Functions.md)
 
 Noon - 1 PM lunch
 
